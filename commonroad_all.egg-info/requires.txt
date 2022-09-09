@@ -1,0 +1,5 @@
+commonroad-io>=2020.4
+commonroad-drivability-checker>=2021.4
+commonroad-vehicle-models>=2.0.0
+commonroad-route-planner>=2022.1
+sumocr>=2022.1

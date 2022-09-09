@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: commonroad-all
+Version: 0.0.1
+Summary: Meta-Package for installing all CommonRoad Tools
+Home-page: https://commonroad.in.tum.de/
+Author: Cyber-Physical Systems Group, Technical University of Munich
+Author-email: commonroad@lists.lrz.de
+License: GNU General Public License v3.0
+Description: CommonRoad
+        ------------------------------
+        
+        This is a meta-package which automatically installs all CommonRoad tools currently released on PyPi.
+        
+        For more details to the individual tool, please see our [website](https://commonroad.in.tum.de/).
+        
+        
+        Tools
+        ------------
+        Currently, the following CommonRoad tools will be installed when downloading this meta-package:
+        
+        * commonroad-io
+        * commonroad-drivability-checker
+        * commonroad-vehicle-models
+        * commonroad-route-planner
+        * sumocr
+        
+        
+        Installation
+        ------------
+        To automatically install the above mentioned tools, please run:
+        ```
+        pip install commonroad-all
+        ```
+        
+Keywords: autonomous automated vehicles driving motion planning
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: C++
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: POSIX :: Linux
+Description-Content-Type: text/markdown

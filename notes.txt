@@ -1,0 +1,6 @@
+Updating the Meta-Package
+-------------------------
+The version numbers should always be fixed to avoid incompatibilities when individual packages have been updated. Steps for updating the meta-package:
+* update dependencies in `setup.py`: Update list entries in `install_requires`
+* update the version number of the meta-package
+* build wheel and push to Pypi

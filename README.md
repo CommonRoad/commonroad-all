@@ -8,13 +8,14 @@ For more details to the individual tool, please see our [website](https://common
 
 Tools
 ------------
-Currently, the following CommonRoad tools will be installed when downloading this meta-package:
+The current version of the meta-package installs the following CommonRoad tools with the specified versions:
 
-* commonroad-io
-* commonroad-drivability-checker
-* commonroad-vehicle-models
-* commonroad-route-planner
-* sumocr
+* commonroad-io==2022.3
+* commonroad-drivability-checker==2022.2.1
+* commonroad-vehicle-models==3.0.2
+* commonroad-route-planner==2022.3
+* sumocr==2022.4
+* commonroad-rl==2023.1.3
 
 
 Installation
@@ -23,11 +24,3 @@ To automatically install the above mentioned tools, please run:
 ```
 pip install commonroad-all
 ```
-
-
-Updating the Meta-Package
--------------------------
-The version numbers should always be fixed to avoid incompatibilities when individual packages have been updated. Steps for updating the meta-package:
-* update dependencies in `setup.py`: Update list entries in `install_requires`
-* update the version number of the meta-package
-* build wheel and push to Pypi

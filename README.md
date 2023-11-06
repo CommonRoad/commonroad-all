@@ -10,12 +10,16 @@ Tools
 ------------
 The current version of the meta-package installs the following CommonRoad tools with the specified versions:
 
-* commonroad-io==2022.3
-* commonroad-drivability-checker==2022.2.1
-* commonroad-vehicle-models==3.0.2
-* commonroad-route-planner==2022.3
-* sumocr==2022.4
-* commonroad-rl==2023.1.3
+* commonroad-io = "2023.3"
+* commonroad-vehicle-models = "3.0.2"
+* commonroad-drivability-checker = "2023.1"
+* commonroad-dataset-converter = "2023.2"
+* sumocr = "2023.2"
+* commonroad-scenario-designer = "0.8.0"
+* commonroad-route-planner = "2022.3"
+* commonroad-crime = "0.3.0"
+* commonroad-openscenario-converter = "0.1.0"
+* commonroad-reach = "2023.1.1"
 
 
 Installation

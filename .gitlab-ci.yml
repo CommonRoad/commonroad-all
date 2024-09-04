@@ -3,7 +3,7 @@ stages:
   - deploy
 
 default:
-  image: python:3.10
+  image: python:3.11
   before_script:
       - pip install poetry
 
@@ -12,7 +12,7 @@ install_all:
   stage: test_install
   parallel :
     matrix :
-      - PYTHON_VERSIONS : [ "3.8", "3.9", "3.10"]
+      - PYTHON_VERSIONS : [ "3.9", "3.10", "3.11"]
   script:
     - pip install poetry
     - poetry config virtualenvs.in-project true

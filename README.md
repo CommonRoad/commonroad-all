@@ -16,12 +16,12 @@ The current version of the meta-package installs the following CommonRoad tools 
 * commonroad-dataset-converter = "2023.2"
 * sumocr = "2024.1"
 * commonroad-scenario-designer = "0.8.2"
-* commonroad-route-planner = "2024.2"
+* commonroad-route-planner = "2024.2.1"
 * commonroad-crime = "0.4.1"
-* commonroad-openscenario-converter = "0.1.1"
 * commonroad-reach = "2024.1.2"
 * commonroad-prediction = "0.1.1"
 * commonroad-reactive-planner = "2024.1"
+* commonroad-velocity-planner = "0.0.1"
 
 
 Installation

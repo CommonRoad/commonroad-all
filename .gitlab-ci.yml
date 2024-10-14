@@ -12,12 +12,22 @@ install_all:
   stage: test_install
   parallel :
     matrix :
-      - PYTHON_VERSIONS : [ "3.9", "3.10", "3.11"]
+      - PYTHON_VERSIONS : ["3.9", "3.10", "3.11"]
   script:
     - pip install poetry
     - poetry config virtualenvs.in-project true
     - poetry install
-    - source .venv/bin/activate
+
+build_and_update_packages:
+    image: python:$PYTHON_VERSIONS
+    stage: test
+    parallel:
+      matrix:
+        - PYTHON_VERSIONS: ["3.9", "3.10", "3.11"]
+    script:
+      - poetry update
+      - poetry install
+    needs: [ ]
 
 publish_internal:
   stage: deploy

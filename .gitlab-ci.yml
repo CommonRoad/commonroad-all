@@ -20,7 +20,7 @@ install_all:
 
 build_and_update_packages:
     image: python:$PYTHON_VERSIONS
-    stage: test
+    stage: test_install
     parallel:
       matrix:
         - PYTHON_VERSIONS: ["3.9", "3.10", "3.11"]

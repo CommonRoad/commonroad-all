@@ -5,7 +5,9 @@ stages:
 default:
   image: python:3.11
   before_script:
-      - pip install poetry
+    - git config --global url."https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.lrz.de/".insteadOf "git@gitlab.lrz.de:"
+    - git config --global url."https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.lrz.de".insteadOf "ssh://git@gitlab.lrz.de"
+    - pip install poetry
 
 install_all:
   image : python:$PYTHON_VERSIONS

@@ -10,6 +10,11 @@ default:
     - pip install poetry
     - poetry config virtualenvs.in-project true
 
+variables:
+  GIT_SUBMODULE_FORCE_HTTPS: "true"  # temporary for dataset-converter repro
+  GIT_SUBMODULE_STRATEGY : recursive   # temporary for dataset-converter repro
+
+
 install_all:
   image : python:$PYTHON_VERSIONS
   stage: test_install

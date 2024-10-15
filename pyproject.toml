@@ -26,7 +26,7 @@ commonroad-drivability-checker = "2024.1"
 commonroad-dataset-converter = { git = "git@gitlab.lrz.de:cps/commonroad/commonroad-dataset-converter.git", branch = "develop" }
 sumocr = "2024.1"
 commonroad-scenario-designer = "0.8.2"
-commonroad-route-planner = "2024.2.1"
+commonroad-route-planner = "2024.2.1"  # 2025.0.1
 commonroad-crime = "0.4.1"
 commonroad-reach = "2024.1.2"
 commonroad-prediction = "0.1.1"

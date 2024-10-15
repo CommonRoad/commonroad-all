@@ -8,6 +8,7 @@ default:
     - git config --global url."https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.lrz.de/".insteadOf "git@gitlab.lrz.de:"
     - git config --global url."https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.lrz.de".insteadOf "ssh://git@gitlab.lrz.de"
     - pip install poetry
+    - poetry config virtualenvs.in-project true
 
 install_all:
   image : python:$PYTHON_VERSIONS
@@ -16,8 +17,6 @@ install_all:
     matrix :
       - PYTHON_VERSIONS : ["3.9", "3.10", "3.11"]
   script:
-    - pip install poetry
-    - poetry config virtualenvs.in-project true
     - poetry install
 
 build_and_update_packages:

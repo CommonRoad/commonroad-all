@@ -22,7 +22,7 @@ packages = [{include = "commonroad_all"}]
 python = ">=3.10, <3.14"
 commonroad-io = "2023.3"
 commonroad-vehicle-models = "3.0.2"
-commonroad-drivability-checker = "2023.1"
+# commonroad-drivability-checker = "2023.1"
 # commonroad-dataset-converter = "2023.2"
 sumocr = "2023.2"
 # commonroad-scenario-designer = "0.8.0"

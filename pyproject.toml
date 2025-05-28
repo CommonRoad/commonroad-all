@@ -21,6 +21,7 @@ packages = [{include = "commonroad_all"}]
 [tool.poetry.dependencies]
 python = ">=3.10, <3.14"
 commonroad-io = { git = "git@gitlab.lrz.de:cps/commonroad/commonroad-io.git", branch = "develop"}
+# commonroad-scenario-factory = { git = "git@gitlab.lrz.de:cps/commonroad/scenario-factory.git", branch = "develop"}
 # commonroad-vehicle-models = "3.0.2"
 # commonroad-drivability-checker = "2023.1"
 # commonroad-dataset-converter = "2023.2"

@@ -1,4 +1,5 @@
 stages:
+  - linting
   - test_install
   - deploy
 
@@ -7,12 +8,19 @@ default:
   before_script:
       - pip install poetry
 
+linting:
+  stage: linting
+  before_script:
+    - pip install pre-commit
+  script:
+    - pre-commit run --all-files --show-diff-on-failure
+
 install_all:
   image : python:$PYTHON_VERSIONS
   stage: test_install
   parallel :
     matrix :
-      - PYTHON_VERSIONS : [ "3.8", "3.9", "3.10"]
+      - PYTHON_VERSIONS : [ "3.10", "3.11", "3.12", "3.13" ]
   script:
     - pip install poetry
     - poetry config virtualenvs.in-project true

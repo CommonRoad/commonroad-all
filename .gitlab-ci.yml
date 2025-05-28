@@ -6,7 +6,8 @@ stages:
 default:
   image: python:3.10
   before_script:
-      - pip install poetry
+    - apt-get update && apt-get install -y git
+    - pip install poetry
 
 linting:
   stage: linting
@@ -22,6 +23,7 @@ install_all:
     matrix :
       - PYTHON_VERSIONS : [ "3.10", "3.11", "3.12", "3.13" ]
   script:
+    - apt-get update && apt-get install -y git
     - pip install poetry
     - poetry config virtualenvs.in-project true
     - poetry install

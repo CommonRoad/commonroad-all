@@ -22,6 +22,7 @@ packages = [{include = "commonroad_all"}]
 python = ">=3.10, <3.12"
 commonroad-io = { git = "git@gitlab.lrz.de:cps/commonroad/commonroad-io.git", branch = "develop"}
 commonroad-route-planner = { git = "git@gitlab.lrz.de:cps/commonroad-route-planner.git", branch = "develop" }
+commonroad-scenario-designer = { git = "git@gitlab.lrz.de:cps/commonroad/commonroad-scenario-designer.git", branch = "develop" }
 # commonroad-scenario-factory = { git = "git@gitlab.lrz.de:cps/commonroad/scenario-factory.git", branch = "develop"}
 # commonroad-vehicle-models = "3.0.2"
 # commonroad-drivability-checker = "2023.1"

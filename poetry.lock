@@ -277,10 +277,8 @@ optional = false
 python-versions = "*"
 groups = ["dev", "pypi"]
 markers = "python_version <= \"3.11\""
-files = [
-    {file = "commonroad_crime-0.4.4-py3-none-any.whl", hash = "sha256:5fd858eaf77d731c73b1e4edb6c9a3d4adc73ddeb96bc8a1125d329eb744f57f"},
-    {file = "commonroad_crime-0.4.4.tar.gz", hash = "sha256:1252e7c32053b6250b6b4311ac0c3e71e563be0d5af50a63e173dc21fde7d201"},
-]
+files = []
+develop = false
 
 [package.dependencies]
 casadi = ">=3.6.3"
@@ -298,6 +296,12 @@ pytest = ">=7.4.0"
 scipy = ">=1.7.3"
 shapely = ">=2.0.1,<3.0.0"
 tqdm = ">=4.65.0"
+
+[package.source]
+type = "git"
+url = "ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-criticality-measures.git"
+reference = "develop"
+resolved_reference = "69e5fb02495a337bff4d3edb80bfd0642e93811a"
 
 [[package]]
 name = "commonroad-drivability-checker"
@@ -3501,4 +3505,4 @@ test = ["pytest (>=4.6.7)", "pytest-checkdocs (>=1.2.5)", "pytest-checkdocs (>=2
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.10, <3.12"
-content-hash = "a1b0f1473029782be2ee09945439fd696a0762830a0293d5e63886cc61a07ea8"
+content-hash = "018ed4c1d4266943e4e25fd3261b600f921cd07ea02a8039272b031fb045fd08"

@@ -25,7 +25,7 @@ install_all:
         PACKAGE_VERSIONS : [ "pypi", "dev" ]
   script:
     - apt-get update && apt-get install -y git
-    - pip install poetry --with ${PACKAGE_VERSIONS}
+    - pip install poetry
     - poetry config virtualenvs.in-project true
     - git config --global url."https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.lrz.de".insteadOf "ssh://git@gitlab.lrz.de"
     # if job is triggered by a schedule, run poetry update to update dependencies
@@ -33,7 +33,7 @@ install_all:
     # note: access to the dev version of other commonroad repos must be granted for this CI
     # to this end, go to https://gitlab.lrz.de/cps/commonroad/commonroad-io (or other repos) → Settings → CI/CD → Job token permissions
     # add your repo to the CI/CD job token allowlist
-    - poetry install
+    - poetry install --with ${PACKAGE_VERSIONS}
     - source .venv/bin/activate
 
 publish_internal:

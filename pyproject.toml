@@ -89,7 +89,7 @@ commonroad-vehicle-models = "^3.0.2"
 #]
 commonroad-reach = [
     { markers = "extra == 'pypi'", version = "^2025.2.0" },
-    { markers = "extra == 'repo'", git = "git@gitlab.lrz.de:cps/commonroad/commonroad-reachable-set.git" }  # TODO fix CI build backend
+    { markers = "extra == 'repo'", git = "git@gitlab.lrz.de:cps/commonroad/commonroad-reachable-set.git" }
 ]
 commonroad-path-toolkit = "^0.0.1"
 #[

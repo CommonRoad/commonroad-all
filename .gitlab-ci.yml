@@ -21,11 +21,10 @@ install_all:
   stage: test_install
   parallel :
     matrix :
-      - PYTHON_VERSIONS : [ "3.10", "3.11" ]  # TODO extend to 3.12 and 3.13
-        PACKAGE_VERSIONS : [ "pypi", "dev" ]
+      - PACKAGE_VERSIONS : [ "pypi", "dev" ]
+      - PACKAGE_VERSIONS_REV : [ "dev", "pypi" ]
+        PYTHON_VERSIONS : [ "3.10", "3.11" ]  # TODO extend to 3.12 and 3.13
   script:
-    - if [ "$PYCKAGE_VERSIONS" == "pypi" ]; then export PACKAGE_VERSIONS_REV="dev"; fi
-    - if [ "$PYCKAGE_VERSIONS" == "dev" ]; then export PACKAGE_VERSIONS_REV="pypi"; fi
     - echo "Installing commonroad-io with Python ${PYTHON_VERSIONS} and package versions ${PACKAGE_VERSIONS} and without ${PACKAGE_VERSIONS_REV}"
     - apt-get update && apt-get install -y git  # libomp-dev libboost-all-dev libeigen3-dev libyaml-cpp-dev pybind11-dev doctest-dev doxygen
     - pip install poetry

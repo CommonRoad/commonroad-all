@@ -24,6 +24,9 @@ install_all:
       - PYTHON_VERSIONS : [ "3.10", "3.11" ]  # TODO extend to 3.12 and 3.13
         PACKAGE_VERSIONS : [ "pypi", "dev" ]
   script:
+    - if [ "$PYCKAGE_VERSIONS" == "pypi" ]; then export PACKAGE_VERSIONS_REV="dev"; fi
+    - if [ "$PYCKAGE_VERSIONS" == "dev" ]; then export PACKAGE_VERSIONS_REV="pypi"; fi
+    - echo "Installing commonroad-io with Python ${PYTHON_VERSIONS} and package versions ${PACKAGE_VERSIONS} and without ${PACKAGE_VERSIONS_REV}"
     - apt-get update && apt-get install -y git  # libomp-dev libboost-all-dev libeigen3-dev libyaml-cpp-dev pybind11-dev doctest-dev doxygen
     - pip install poetry
     - poetry config virtualenvs.in-project true
@@ -33,7 +36,7 @@ install_all:
     # note: access to the dev version of other commonroad repos must be granted for this CI
     # to this end, go to https://gitlab.lrz.de/cps/commonroad/commonroad-io (or other repos) → Settings → CI/CD → Job token permissions
     # add your repo to the CI/CD job token allowlist
-    - poetry install --with ${PACKAGE_VERSIONS}
+    - poetry install --with ${PACKAGE_VERSIONS} --without ${PACKAGE_VERSIONS_REV}
     - source .venv/bin/activate
 
 publish_internal:

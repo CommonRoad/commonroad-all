@@ -399,27 +399,31 @@ name = "commonroad-ots"
 version = "2025.1"
 description = "Coupling CommonRoad and OpenTrafficSim."
 optional = false
-python-versions = "<4.0,>=3.10"
+python-versions = "^3.10"
 groups = ["dev", "pypi"]
 markers = "python_version <= \"3.11\""
-files = [
-    {file = "commonroad_ots-2025.1-py3-none-any.whl", hash = "sha256:34a7c10008c9977d204da0569d06f050703872d9faa1a4a971c73d10a87624cd"},
-    {file = "commonroad_ots-2025.1.tar.gz", hash = "sha256:aaa9a85441824471ca1151a828027c1805cdf2f499d183e1acd3a7693faef171"},
-]
+files = []
+develop = false
 
 [package.dependencies]
 commonroad-io = ">=2023.4"
-dtaidistance = ">=2.3.11,<3.0.0"
-JPype1 = ">=1.5.0,<2.0.0"
-matplot2tikz = ">=0.3.3,<0.4.0"
-matplotlib = ">=3.7.0,<4.0.0"
-networkx = ">=3.2.1,<4.0.0"
+dtaidistance = "^2.3.11"
+JPype1 = "^1.5.0"
+matplot2tikz = "^0.4.1"
+matplotlib = "^3.7.0"
+networkx = "^3.2.1"
 numpy = {version = ">=1.26.1", markers = "python_version < \"3.13\""}
 opentrafficsim = "1.7.5"
-pandas = ">=2.2.1,<3.0.0"
-pyperclip = ">=1.8.2,<2.0.0"
-scipy = ">=1.12.0,<2.0.0"
-shapely = ">=2.0.3,<3.0.0"
+pandas = "^2.2.1"
+pyperclip = "^1.8.2"
+scipy = "^1.12.0"
+shapely = "^2.0.3"
+
+[package.source]
+type = "git"
+url = "ssh://git@gitlab.lrz.de/cps/commonroad/cr-ots-interface.git"
+reference = "dev"
+resolved_reference = "33e51dcfe7786532f01ac3b940c3525af0ce1be4"
 
 [[package]]
 name = "commonroad-reach"
@@ -593,26 +597,35 @@ resolved_reference = "d333a86e342eaa608c7324a443503cff54600df8"
 
 [[package]]
 name = "commonroad-sumo"
-version = "2025.1"
+version = "2025.1.1"
 description = "Interface between CommonRoad and the SUMO traffic simulator"
 optional = false
-python-versions = ">=3.9"
+python-versions = ">=3.10,<4.0"
 groups = ["dev", "pypi"]
 markers = "python_version <= \"3.11\""
-files = [
-    {file = "commonroad_sumo-2025.1-py3-none-any.whl", hash = "sha256:57b00e6a91af8414d334b0a91f3824d47a9a86175e4b52742f3b3301ba3e3377"},
-    {file = "commonroad_sumo-2025.1.tar.gz", hash = "sha256:4f8dc0244eff7b83d60b9405709af6b09cc8f824296f99a58a6210d8cb3849c0"},
-]
+files = []
+develop = false
 
 [package.dependencies]
-commonroad-io = ">=2024.3"
-ffmpeg = ">=1.4,<2.0"
+commonroad-io = ">=2024.3,<2025.0"
+ffmpeg = ">=1.4,<2.0.0"
 libsumo = ">=1.19.0,<2.0.0"
 matplotlib = ">=3.0.0,<4.0.0"
-numpy = {version = ">=1.26.1", markers = "python_version < \"3.13\""}
+numpy = {version = ">=1.26.1,<2.0.0", markers = "python_version < \"3.13\""}
 shapely = ">=2.0.0,<3.0.0"
 traci = ">=1.19.0,<2.0.0"
 typing-extensions = ">=4.12.2,<5.0.0"
+
+[package.extras]
+dev = ["pre-commit (>=3.5.0,<4.0.0)"]
+docs = ["mkdocs (>=1.6.0,<2.0.0)", "mkdocs-autorefs (>=1.0.1,<2.0.0)", "mkdocs-material (>=9.6.14,<10.0.0)", "mkdocstrings-python (>=1.10.3,<2.0.0)"]
+test = ["coverage[toml] (>=7.5,<8.0.0)", "parameterized (>=0.8.1,<1.0.0)", "pytest (>=7.4,<8.0.0)", "pytest-mock (>=3.12.0,<4.0.0)"]
+
+[package.source]
+type = "git"
+url = "ssh://git@gitlab.lrz.de/cps/sumo-interface.git"
+reference = "develop"
+resolved_reference = "b91dde58798442be613b7be84c91db01ce569b0f"
 
 [[package]]
 name = "commonroad-vehicle-models"
@@ -1550,15 +1563,15 @@ source = ["Cython (>=0.29.35)"]
 
 [[package]]
 name = "matplot2tikz"
-version = "0.3.3"
+version = "0.4.1"
 description = "Convert matplotlib figures into TikZ/PGFPlots"
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.9"
 groups = ["dev", "pypi"]
 markers = "python_version <= \"3.11\""
 files = [
-    {file = "matplot2tikz-0.3.3-py3-none-any.whl", hash = "sha256:ff076792b13d924bcfb1350c36626d2afc6ff28466d8b4c76ff6d91c87b9f587"},
-    {file = "matplot2tikz-0.3.3.tar.gz", hash = "sha256:ebdfce47b4afb0041071baad9be4f041ab528dbd27772d0d0c29b274572e1238"},
+    {file = "matplot2tikz-0.4.1-py3-none-any.whl", hash = "sha256:49ffd84cd36a27ba8b1918d4a7be0c1a0ff3136c5e6457ec0093ca1a1bea9da3"},
+    {file = "matplot2tikz-0.4.1.tar.gz", hash = "sha256:159e35f34f43f5038a6012819606567c65ac3b18ad1e85c5af2231a76afb6014"},
 ]
 
 [package.dependencies]
@@ -1569,9 +1582,9 @@ typing_extensions = ">=4.5"
 webcolors = "*"
 
 [package.extras]
-dev = ["coverage[toml] (==7.3.1)", "mypy", "pytest (==7.4.1)", "pytest-cov (==4.1.0)", "ruff", "tox", "tox-pyenv-redux", "typeguard (==4.4.0)"]
+dev = ["coverage[toml] (>=7.0.0)", "mypy", "pytest (>=7.4.1)", "pytest-cov (>=6.0.0)", "ruff", "tox", "tox-pyenv-redux", "typeguard (>=4.4.0)"]
 lint = ["mypy", "ruff"]
-test = ["coverage[toml] (==7.3.1)", "pytest (==7.4.1)", "pytest-cov (==4.1.0)", "typeguard (==4.4.0)"]
+test = ["coverage[toml] (>=7.0.0)", "pytest (>=7.4.1)", "pytest-cov (>=6.0.0)", "typeguard (>=4.4.0)"]
 
 [[package]]
 name = "matplotlib"
@@ -3488,4 +3501,4 @@ test = ["pytest (>=4.6.7)", "pytest-checkdocs (>=1.2.5)", "pytest-checkdocs (>=2
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.10, <3.12"
-content-hash = "c4236a79a34033cb1d9b146a45c7f6dd169b397ae69b1240001881dc7bbb0815"
+content-hash = "a1b0f1473029782be2ee09945439fd696a0762830a0293d5e63886cc61a07ea8"

@@ -7,33 +7,150 @@ license = "GPL-3.0-or-later"
 readme = "README.md"
 keywords= ["autonomous", "automated", "vehicles", "driving", "motion", "planning", "simulation", "map", "scenario"]
 classifiers = [
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
-#    "Programming Language :: Python :: 3.11",
-#    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.11",
     "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
     "Operating System :: POSIX :: Linux",
-#    "Operating System :: MacOS",
-#    "Operating System :: Microsoft :: Windows"
 ]
 packages = [{include = "commonroad_all"}]
 
 [tool.poetry.dependencies]
-python = ">=3.8,<3.11"
-commonroad-io = "2023.3"
-commonroad-vehicle-models = "3.0.2"
-commonroad-drivability-checker = "2023.1"
-commonroad-dataset-converter = "2023.2"
-sumocr = "2023.2"
-commonroad-scenario-designer = "0.8.0"
-commonroad-route-planner = "2022.3"
-commonroad-crime = "0.3.0"
-commonroad-reach = "2023.1.1"
-# commonroad-openscenario-converter = "0.1.0"
-# commonroad-rl = "2023.1.3"
-# crgeo = "0.1.1"
-# commonroad-geometric = "0.1.2"
+python = ">=3.10, <3.12"
+commonroad-io = [
+    { markers = "extra == 'pypi'", version = "^2024.2" },  # PyPI version
+    { markers = "extra == 'repo'", git = "git@gitlab.lrz.de:cps/commonroad/commonroad-io.git" }  # repo version; you could additionally specify a branch with, e.g., `branch = "develop"`
+]
+commonroad-route-planner = [
+    { markers = "extra == 'pypi'", version = "^2025.1.0" },
+    { markers = "extra == 'repo'", git = "git@gitlab.lrz.de:cps/commonroad-route-planner.git" }
+]
+commonroad-scenario-factory = [
+    { markers = "extra == 'pypi'", version = "^2.0.0" },
+    { markers = "extra == 'repo'", git = "git@gitlab.lrz.de:cps/commonroad/scenario-factory.git" }
+]
+commonroad-ots = [
+    { markers = "extra == 'pypi'", version = "^2025.1" },
+    { markers = "extra == 'repo'", git = "git@gitlab.lrz.de:cps/commonroad/cr-ots-interface.git" }
+]
+commonroad-sumo = [
+    { markers = "extra == 'pypi'", version = "^2025.1" },
+    { markers = "extra == 'repo'", git = "git@gitlab.lrz.de:cps/sumo-interface.git" }
+]
+commonroad-labeling = [
+    { markers = "extra == 'pypi'", version = "^2025.1.1" },
+    { markers = "extra == 'repo'", git = "git@gitlab.lrz.de:cps/commonroad/automatic-scenario-labeling.git" },
+]
+commonroad-crime = [
+    { markers = "extra == 'pypi'", version = "^0.4.4" },
+    { markers = "extra == 'repo'", git = "git@gitlab.lrz.de:cps/commonroad/commonroad-criticality-measures.git" }
+]
+commonroad-drivability-checker = [
+    { markers = "extra == 'pypi'", version = "^2025.3.1" },
+    { markers = "extra == 'repo'", git = "git@gitlab.lrz.de:cps/commonroad-drivability-checker.git" }
+]
+commonroad-clcs = [
+    { markers = "extra == 'pypi'", version = "^2025.2.0" },
+    { markers = "extra == 'repo'", git = "git@gitlab.lrz.de:cps/commonroad/commonroad-clcs.git" }
+]
+commonroad-global-planner = [
+    { markers = "extra == 'pypi'", version = "^0.0.1" },
+    { markers = "extra == 'repo'", git = "git@gitlab.lrz.de:cps/commonroad/commonroad-global-planner.git" }
+]
+commonroad-velocity-planner = [
+    { markers = "extra == 'pypi'", version = "^1.0.0" },
+    { markers = "extra == 'repo'", git = "git@gitlab.lrz.de:cps/commonroad/commonroad-velocity-planner.git" }
+]
+commonroad-reactive-planner = [
+    { markers = "extra == 'pypi'", version = "^2025.1" },
+    { markers = "extra == 'repo'", git = "git@gitlab.lrz.de:cps/reactive-planner.git" }
+]
+commonroad-raceline-planner = [
+    { markers = "extra == 'pypi'", version = "^0.1.1" },
+    { markers = "extra == 'repo'", git = "git@gitlab.lrz.de:cps/commonroad/commonroad-raceline-planner.git" }
+]
+commonroad-prediction = [
+    { markers = "extra == 'pypi'", version = "^0.1.1" },
+    { markers = "extra == 'repo'", git = "git@gitlab.lrz.de:cps/commonroad/commonroad-prediction.git" }
+]
+# TODO fix all below packages
+commonroad-scenario-designer = { git = "git@gitlab.lrz.de:cps/commonroad/commonroad-scenario-designer.git", optional = true}
+#[
+#    { markers = "extra == 'pypi'", version = "^0.8.4" }, # TODO update commonroad-drivability-checker version
+#    { markers = "extra == 'repo'", git = "git@gitlab.lrz.de:cps/commonroad/commonroad-scenario-designer.git" }
+#]
+commonroad-vehicle-models = "^3.0.2"
+#[
+#    { markers = "extra == 'pypi'", version = "^3.0.2" },
+#    { markers = "extra == 'repo'", git = "git@gitlab.lrz.de:cps/commonroad-vehicle-models.git" }  # TODO relax commonroad-crime to run development version
+#]
+commonroad-reach = "^2025.2.0"
+#[
+#    { markers = "extra == 'pypi'", version = "^2025.2.0" },
+#    { markers = "extra == 'repo'", git = "git@gitlab.lrz.de:cps/commonroad/commonroad-reachable-set.git" }  # TODO fix CI build backend
+#]
+commonroad-path-toolkit = "^0.0.1"
+#[
+#    { markers = "extra == 'pypi'", version = "^0.0.1" },
+#    { markers = "extra == 'repo'", git = "git@gitlab.lrz.de:cps/commonroad/commonroad-path-toolkit.git" }  # TODO fix CI build backend
+#]
+#commonroad-carla-interface = [
+#    { markers = "extra == 'pypi'", version = "^1.0.0" },  # TODO python version must be updated
+#    { markers = "extra == 'repo'", git = "git@gitlab.lrz.de:cps/commonroad/commonroad-carla-interface.git" }  # TODO python version must be updated
+#]
+#commonroad-dataset-converter = [
+#    { markers = "extra == 'pypi'", version = "^2023.2" },  # TODO python verion must be updated
+#    { markers = "extra == 'repo'", git = "git@gitlab.lrz.de:cps/commonroad/commonroad-dataset-converter.git" }  # TODO commonroad-drivability-checker version must be updated
+#]
+# commonroad-openscenario-converter = "0.1.0"  # TODO commonroad-io version must be updated
+# commonroad-rl = "2023.1.3"  # TODO commonroad-route-planner version must be updated
+# commonroad-geometric = "0.1.2"  # TODO python version must be updated
+
+
+[tool.poetry.extras]
+pypi = [
+    "commonroad-io",
+    "commonroad-vehicle-models",
+    "commonroad-route-planner",
+    "commonroad-scenario-factory",
+    "commonroad-ots",
+    "commonroad-sumo",
+    "commonroad-labeling",
+    "commonroad-crime",
+    "commonroad-drivability-checker",
+    "commonroad-reach",
+    "commonroad-clcs",
+    "commonroad-global-planner",
+    "commonroad-velocity-planner",
+    "commonroad-reactive-planner",
+    "commonroad-raceline-planner",
+    "commonroad-path-toolkit",
+    "commonroad-prediction",
+    # "commonroad-scenario-designer",
+    # "commonroad-carla-interface",
+    # "commonroad-dataset-converter"
+]
+repo = [
+    "commonroad-io",
+    "commonroad-vehicle-models",
+    "commonroad-route-planner",
+    "commonroad-scenario-factory",
+    "commonroad-ots",
+    "commonroad-sumo",
+    "commonroad-labeling",
+    "commonroad-crime",
+    "commonroad-drivability-checker",
+    "commonroad-reach",
+    "commonroad-clcs",
+    "commonroad-global-planner",
+    "commonroad-velocity-planner",
+    "commonroad-reactive-planner",
+    "commonroad-raceline-planner",
+    "commonroad-path-toolkit",
+    "commonroad-prediction",
+    "commonroad-scenario-designer",
+    # "commonroad-carla-interface",
+    # "commonroad-dataset-converter"
+]
 
 [build-system]
 requires = ["poetry-core"]

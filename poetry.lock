@@ -6,8 +6,8 @@ version = "4.9.3"
 description = "ANTLR 4.9.3 runtime for Python 3.7"
 optional = false
 python-versions = "*"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "antlr4-python3-runtime-4.9.3.tar.gz", hash = "sha256:f224469b4168294902bb1efa80a8bf7855f24c99aef99cbefc1bcd3cce77881b"},
 ]
@@ -16,10 +16,10 @@ files = [
 name = "asttokens"
 version = "3.0.0"
 description = "Annotate AST trees with source code positions"
-optional = false
+optional = true
 python-versions = ">=3.8"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "asttokens-3.0.0-py3-none-any.whl", hash = "sha256:e3078351a059199dd5138cb1c706e6430c05eff2ff136af5eb4790f9d28932e2"},
     {file = "asttokens-3.0.0.tar.gz", hash = "sha256:0dcd8baa8d62b0c1d118b399b2ddba3c4aff271d0d7a9e0d4c1681c79035bbc7"},
@@ -33,10 +33,10 @@ test = ["astroid (>=2,<4)", "pytest", "pytest-cov", "pytest-xdist"]
 name = "casadi"
 version = "3.7.1"
 description = "CasADi -- framework for algorithmic differentiation and numeric optimization"
-optional = false
+optional = true
 python-versions = "*"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "casadi-3.7.1-cp27-none-macosx_10_13_x86_64.macosx_10_13_intel.whl", hash = "sha256:cc429d3144a057fa8110217fd0b881e779c373640a5dd8511dfa0ec0e916a9d7"},
     {file = "casadi-3.7.1-cp27-none-manylinux1_i686.whl", hash = "sha256:2081aa1d329ed562a4ec014f7ac3bd9c9514ebc03a3b2b296f164b49f0189c13"},
@@ -98,10 +98,10 @@ numpy = "*"
 name = "certifi"
 version = "2025.8.3"
 description = "Python package for providing Mozilla's CA Bundle."
-optional = false
+optional = true
 python-versions = ">=3.7"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "certifi-2025.8.3-py3-none-any.whl", hash = "sha256:f6c12493cfb1b06ba2ff328595af9350c65d6644968e5d3a2ffd78699af217a5"},
     {file = "certifi-2025.8.3.tar.gz", hash = "sha256:e564105f78ded564e3ae7c923924435e1daa7463faeab5bb932bc53ffae63407"},
@@ -111,10 +111,10 @@ files = [
 name = "cffi"
 version = "1.17.1"
 description = "Foreign Function Interface for Python calling C code."
-optional = false
+optional = true
 python-versions = ">=3.8"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "cffi-1.17.1-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:df8b1c11f177bc2313ec4b2d46baec87a5f3e71fc8b45dab2ee7cae86d9aba14"},
     {file = "cffi-1.17.1-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:8f2cdc858323644ab277e9bb925ad72ae0e67f69e804f4898c070998d50b1a67"},
@@ -192,10 +192,10 @@ pycparser = "*"
 name = "charset-normalizer"
 version = "3.4.2"
 description = "The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet."
-optional = false
+optional = true
 python-versions = ">=3.7"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "charset_normalizer-3.4.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:7c48ed483eb946e6c04ccbe02c6b4d1d48e51944b6db70f697e089c193404941"},
     {file = "charset_normalizer-3.4.2-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:b2d318c11350e10662026ad0eb71bb51c7812fc8590825304ae0bdd4ac283acd"},
@@ -295,10 +295,10 @@ files = [
 name = "clarabel"
 version = "0.11.1"
 description = "Clarabel Conic Interior Point Solver for Rust / Python"
-optional = false
+optional = true
 python-versions = ">=3.9"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "clarabel-0.11.1-cp39-abi3-macosx_10_12_x86_64.whl", hash = "sha256:c39160e4222040f051f2a0598691c4f9126b4d17f5b9e7678f76c71d611e12d8"},
     {file = "clarabel-0.11.1-cp39-abi3-macosx_11_0_arm64.whl", hash = "sha256:8963687ee250d27310d139eea5a6816f9c3ae31f33691b56579ca4f0f0b64b63"},
@@ -317,10 +317,10 @@ scipy = "*"
 name = "click"
 version = "8.2.1"
 description = "Composable command line interface toolkit"
-optional = false
+optional = true
 python-versions = ">=3.10"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "click-8.2.1-py3-none-any.whl", hash = "sha256:61a3265b914e850b85317d0b3109c7f8cd35a670f963866005d6ef1d5175a12b"},
     {file = "click-8.2.1.tar.gz", hash = "sha256:27c491cc05d968d271d5a1db13e3b5a184636d9d930f148c50b038f0d0646202"},
@@ -335,8 +335,8 @@ version = "0.4.6"
 description = "Cross-platform colored terminal text."
 optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,!=3.6.*,>=2.7"
-groups = ["pypi"]
-markers = "(sys_platform == \"win32\" or platform_system == \"Windows\") and python_version <= \"3.11\""
+groups = ["main"]
+markers = "(sys_platform == \"win32\" or platform_system == \"Windows\") and (extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6"},
     {file = "colorama-0.4.6.tar.gz", hash = "sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44"},
@@ -348,8 +348,8 @@ version = "2025.2.0"
 description = "Curvilinear (Frenet) Coordinate System for motion planning."
 optional = false
 python-versions = "<3.14,>=3.10"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "commonroad_clcs-2025.2.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:f791cf9c70fe681cc177e80420298a3999d3a6ec6588f787c1f6c4a23e2f545e"},
     {file = "commonroad_clcs-2025.2.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:74462bbd55519950c3f22b43511740eeb94b82bab9480b8e6f4065a290d207a5"},
@@ -373,13 +373,44 @@ docs = ["mkdocs (>=1.6.1,<2.0.0)", "mkdocs-material (>=9.5.10,<10.0.0)", "mkdocs
 test = ["parameterized (>=0.9.0,<0.10.0)", "pytest (>=3.8.0)"]
 
 [[package]]
+name = "commonroad-clcs"
+version = "2025.2.0"
+description = "Curvilinear (Frenet) Coordinate System for motion planning."
+optional = false
+python-versions = ">=3.10,<3.14"
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
+files = []
+develop = false
+
+[package.dependencies]
+commonroad-io = ">=2023.1"
+matplotlib = ">=3.3.3"
+numpy = ">=1.19.2"
+omegaconf = ">=2.1.1"
+osqp = ">=0.6.5,<0.7.0"
+scipy = ">=1.4.1"
+shapely = ">=2.0.0"
+
+[package.extras]
+build = ["cmake (>=3.24,<4.0)", "nanobind (>=2.2.0,<2.3.0)", "pathspec (>=0.12.1)", "pyproject-metadata (>=0.7.1)", "scikit-build-core (>=0.11.0,<0.12.0)", "typing_extensions (>=4.12.2,<4.13.0)"]
+docs = ["mkdocs (>=1.6.1,<2.0.0)", "mkdocs-material (>=9.5.10,<10.0.0)", "mkdocstrings-python (>=1.8.0,<2.0.0)", "mkdoxy (>=1.2.4,<1.3.0)"]
+test = ["parameterized (>=0.9.0,<0.10.0)", "pytest (>=3.8.0)"]
+
+[package.source]
+type = "git"
+url = "ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-clcs.git"
+reference = "HEAD"
+resolved_reference = "34040496aa71a6244c99ce3236d3c395731b940b"
+
+[[package]]
 name = "commonroad-crime"
 version = "0.4.4"
 description = "criticality measures of automated vehicles"
-optional = false
+optional = true
 python-versions = "*"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "python_version <= \"3.11\" and extra == \"pypi\""
 files = [
     {file = "commonroad_crime-0.4.4-py3-none-any.whl", hash = "sha256:5fd858eaf77d731c73b1e4edb6c9a3d4adc73ddeb96bc8a1125d329eb744f57f"},
     {file = "commonroad_crime-0.4.4.tar.gz", hash = "sha256:1252e7c32053b6250b6b4311ac0c3e71e563be0d5af50a63e173dc21fde7d201"},
@@ -403,13 +434,47 @@ shapely = ">=2.0.1,<3.0.0"
 tqdm = ">=4.65.0"
 
 [[package]]
+name = "commonroad-crime"
+version = "0.4.4"
+description = "criticality measures of automated vehicles"
+optional = true
+python-versions = "*"
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
+files = []
+develop = false
+
+[package.dependencies]
+casadi = ">=3.6.3"
+commonroad-clcs = ">=2025.2.0,<2025.3.0"
+commonroad-drivability-checker = ">=2025.3.1,<2025.4.0"
+commonroad-io = ">=2024.1,<2025.0"
+commonroad-reach = ">=2025.2.0,<2025.3.0"
+commonroad-route-planner = ">=2025.1.0,<2025.2.0"
+commonroad-vehicle-models = ">=3.0.0,<3.1.0"
+imageio = ">=2.9.0"
+matplotlib = ">=3.5.2,<3.9"
+numpy = ">=1.19.0"
+omegaconf = ">=2.1.1"
+pytest = ">=7.4.0"
+scipy = ">=1.7.3"
+shapely = ">=2.0.1,<3.0.0"
+tqdm = ">=4.65.0"
+
+[package.source]
+type = "git"
+url = "ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-criticality-measures.git"
+reference = "HEAD"
+resolved_reference = "69e5fb02495a337bff4d3edb80bfd0642e93811a"
+
+[[package]]
 name = "commonroad-drivability-checker"
 version = "2025.3.1"
 description = "Drivability checker for CommonRoad scenarios."
 optional = false
 python-versions = "<3.14,>=3.10"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "commonroad_drivability_checker-2025.3.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:4dce1aa51d0fe866eb3752926757e814278c277a00f571877ea2f971c8bf9207"},
     {file = "commonroad_drivability_checker-2025.3.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:3a3b482356eb2f47f569ffad635e629dbd8058e7a459c777d7a9ebddda48c258"},
@@ -435,13 +500,46 @@ test = ["pytest (>=5.3.2)"]
 triangle = ["triangle (>=20250106)"]
 
 [[package]]
+name = "commonroad-drivability-checker"
+version = "2025.3.1"
+description = "Drivability checker for CommonRoad scenarios."
+optional = false
+python-versions = ">=3.10,<3.14"
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
+files = []
+develop = false
+
+[package.dependencies]
+commonroad-io = ">=2023.1,<2025.0"
+commonroad-vehicle-models = ">=3.0.0,<4.0.0"
+matplotlib = ">=3.2.2,<4.0.0"
+numpy = ">=1.20,<3.0"
+polygon3 = ">=3.0.8,<4.0.0"
+scipy = ">=1.7.0,<2.0"
+shapely = ">=2.0.0,<3.0.0"
+
+[package.extras]
+build = ["cmake (>=3.24,<4.0)", "nanobind (>=2.2.0,<2.3.0)", "pathspec (>=0.12.1)", "pyproject-metadata (>=0.7.1)", "scikit-build-core (>=0.11.0,<0.12.0)", "typing_extensions (>=4.12.2,<4.13.0)"]
+clcs = ["commonroad-clcs (>=2025.1.0,<2026.0.0)"]
+docs = ["breathe (>=4.18.0)", "cmake (>=3.24,<4.0)", "ipython (>=8.36.0)", "nbsphinx (>=0.6.1)", "nbsphinx_link (>=1.3.0)", "sphinx (>=3.0.3)", "sphinx_rtd_theme (>=0.4.3)"]
+test = ["pytest (>=5.3.2)"]
+triangle = ["triangle (>=20250106)"]
+
+[package.source]
+type = "git"
+url = "ssh://git@gitlab.lrz.de/cps/commonroad-drivability-checker.git"
+reference = "HEAD"
+resolved_reference = "7e4c4530de34130e90fddce985be5c9904f7f911"
+
+[[package]]
 name = "commonroad-global-planner"
 version = "0.0.1"
 description = "CommonRoad Global Planner Toolbox"
-optional = false
+optional = true
 python-versions = "<3.12,>=3.9"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "python_version <= \"3.11\" and extra == \"pypi\""
 files = [
     {file = "commonroad_global_planner-0.0.1-py3-none-any.whl", hash = "sha256:a77c18bbf38a707d1dcc4a0703a4dbba52a1830295c0f203bb1f4eff11046469"},
     {file = "commonroad_global_planner-0.0.1.tar.gz", hash = "sha256:f6d9889bd845eec30a445a1910f9999de3546ca2a76a0719ccac036d9f3755a6"},
@@ -454,13 +552,36 @@ commonroad-velocity-planner = ">=1.0.0,<2.0.0"
 matplotlib = "<3.9"
 
 [[package]]
+name = "commonroad-global-planner"
+version = "0.0.1"
+description = "CommonRoad Global Planner Toolbox"
+optional = true
+python-versions = ">=3.9,<3.12"
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
+files = []
+develop = false
+
+[package.dependencies]
+commonroad-io = ">=2022.2, <2025.0.1"
+commonroad-route-planner = "^2025.0.1"
+commonroad-velocity-planner = "^1.0.0"
+matplotlib = "<3.9"
+
+[package.source]
+type = "git"
+url = "ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-global-planner.git"
+reference = "HEAD"
+resolved_reference = "ae06c26634e60eb3b0ebd33d39b29c066eb8db9b"
+
+[[package]]
 name = "commonroad-io"
 version = "2024.3"
 description = "Python tool to read, write, and visualize CommonRoad scenarios and solutions for automated vehicles."
 optional = false
 python-versions = "<4.0,>=3.9"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "commonroad_io-2024.3-py3-none-any.whl", hash = "sha256:2994cda71550903ca93834c472ab14bd7f5f8aadbded8576a02055f0e01b1530"},
     {file = "commonroad_io-2024.3.tar.gz", hash = "sha256:9561464469e83e518675cfc8e1a782eaff535aeda93803cc7facf62237b11ff3"},
@@ -482,13 +603,45 @@ shapely = ">=2.0.1,<3.0.0"
 tqdm = ">=4.64"
 
 [[package]]
+name = "commonroad-io"
+version = "2024.3"
+description = "Python tool to read, write, and visualize CommonRoad scenarios and solutions for automated vehicles."
+optional = false
+python-versions = "^3.9"
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
+files = []
+develop = false
+
+[package.dependencies]
+commonroad-vehicle-models = ">=2.0.0"
+iso3166 = ">=1.0.1"
+lxml = ">=4.2.2"
+matplotlib = ">=3.0.0"
+networkx = ">=2.2"
+numpy = {version = ">=1.26.1", markers = "python_version < \"3.13\""}
+omegaconf = ">=2.0"
+pillow = ">=10.4.0"
+protobuf = "==3.20.2"
+rtree = ">=0.8.3"
+scipy = {version = ">=1.11.3", markers = "python_version < \"3.13\""}
+shapely = "^2.0.1"
+tqdm = ">=4.64"
+
+[package.source]
+type = "git"
+url = "ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-io.git"
+reference = "HEAD"
+resolved_reference = "bdfab5ccc14d1362050d565c88f2a98d6cabdf67"
+
+[[package]]
 name = "commonroad-labeling"
 version = "2025.1.1"
 description = "Automatic labeling of CommonRoad scenarios."
-optional = false
+optional = true
 python-versions = ">=3.10"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "python_version <= \"3.11\" and extra == \"pypi\""
 files = [
     {file = "commonroad_labeling-2025.1.1-py3-none-any.whl", hash = "sha256:861bb1a448ffbe43a26dac5ccd46c12c43bcb07aa573a5fc74ecebf7ebc54cae"},
     {file = "commonroad_labeling-2025.1.1.tar.gz", hash = "sha256:66bf5041d5a4dbf94624b16998da83a1c684045e0b9074eede5c63ec151f0ff6"},
@@ -513,13 +666,39 @@ scipy = ">=1.5.2"
 triangle = ">=20230923"
 
 [[package]]
+name = "commonroad-labeling"
+version = "2025.1.1"
+description = "Automatic labeling of CommonRoad scenarios."
+optional = true
+python-versions = ">=3.10,<3.12"
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
+files = []
+develop = false
+
+[package.dependencies]
+commonroad-crime = ">=0.4.4"
+commonroad-io = ">=2024.3"
+commonroad-reactive-planner = "^2025.1"
+commonroad-route-planner = ">=2025.1.0"
+matplotlib = ">=3.5.2, < 3.9"
+pandas = "^2.2.2"
+scikit-learn = "^1.4"
+
+[package.source]
+type = "git"
+url = "ssh://git@gitlab.lrz.de/cps/commonroad/automatic-scenario-labeling.git"
+reference = "HEAD"
+resolved_reference = "4d627e3de96340a7bbab6ea65f81e1486da49497"
+
+[[package]]
 name = "commonroad-ots"
 version = "2025.1"
 description = "Coupling CommonRoad and OpenTrafficSim."
-optional = false
+optional = true
 python-versions = "<4.0,>=3.10"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "python_version <= \"3.11\" and extra == \"pypi\""
 files = [
     {file = "commonroad_ots-2025.1-py3-none-any.whl", hash = "sha256:34a7c10008c9977d204da0569d06f050703872d9faa1a4a971c73d10a87624cd"},
     {file = "commonroad_ots-2025.1.tar.gz", hash = "sha256:aaa9a85441824471ca1151a828027c1805cdf2f499d183e1acd3a7693faef171"},
@@ -540,13 +719,44 @@ scipy = ">=1.12.0,<2.0.0"
 shapely = ">=2.0.3,<3.0.0"
 
 [[package]]
+name = "commonroad-ots"
+version = "2025.1"
+description = "Coupling CommonRoad and OpenTrafficSim."
+optional = true
+python-versions = "^3.10"
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
+files = []
+develop = false
+
+[package.dependencies]
+commonroad-io = ">=2023.4"
+dtaidistance = "^2.3.11"
+JPype1 = "^1.5.0"
+matplot2tikz = "^0.4.1"
+matplotlib = "^3.7.0"
+networkx = "^3.2.1"
+numpy = {version = ">=1.26.1", markers = "python_version < \"3.13\""}
+opentrafficsim = "1.7.5"
+pandas = "^2.2.1"
+pyperclip = "^1.8.2"
+scipy = "^1.12.0"
+shapely = "^2.0.3"
+
+[package.source]
+type = "git"
+url = "ssh://git@gitlab.lrz.de/cps/commonroad/cr-ots-interface.git"
+reference = "HEAD"
+resolved_reference = "33e51dcfe7786532f01ac3b940c3525af0ce1be4"
+
+[[package]]
 name = "commonroad-path-toolkit"
 version = "0.0.1"
 description = "Useful functions for working with paths"
-optional = false
+optional = true
 python-versions = "<3.13,>=3.8"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "python_version <= \"3.11\" and extra == \"pypi\""
 files = [
     {file = "commonroad_path_toolkit-0.0.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:70ad0c571b7160bd9da00a311f11e234cafc6f4d18b4ebd5dafeda4035b4f52d"},
     {file = "commonroad_path_toolkit-0.0.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:311412ef426331512db22fa8e9afe742e29ee07eadbf81f15511fd696e9ad1e7"},
@@ -556,13 +766,30 @@ files = [
 ]
 
 [[package]]
+name = "commonroad-path-toolkit"
+version = "0.0.1"
+description = "Useful functions for working with paths"
+optional = true
+python-versions = ">=3.8, <3.13"
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
+files = []
+develop = false
+
+[package.source]
+type = "git"
+url = "ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-path-toolkit.git"
+reference = "HEAD"
+resolved_reference = "d6e01f252ab12407a2b7036282752a56c07ada23"
+
+[[package]]
 name = "commonroad-prediction"
 version = "0.1.1"
 description = "A collection and interface for CommonRoad prediction algorithms."
-optional = false
+optional = true
 python-versions = "<3.12,>=3.9"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "python_version <= \"3.11\" and extra == \"pypi\""
 files = [
     {file = "commonroad_prediction-0.1.1-py3-none-any.whl", hash = "sha256:e65cf19d94c725f206075434ff4241bd6d7e7f3660f75c94713afda8811a4ec4"},
     {file = "commonroad_prediction-0.1.1.tar.gz", hash = "sha256:39766779be1bfe4ba39ffffdffc78e0818aa2fc3b0bd30fef9565757a4c8943a"},
@@ -575,13 +802,37 @@ imageio = ">=2.31.1,<3.0.0"
 numpy = "<2.0"
 
 [[package]]
+name = "commonroad-prediction"
+version = "0.1.1"
+description = "A collection and interface for CommonRoad prediction algorithms."
+optional = true
+python-versions = "^3.9,<3.12"
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
+files = []
+develop = false
+
+[package.dependencies]
+commonroad-clcs = ">=2025.1"
+commonroad-drivability-checker = ">=2025.1"
+commonroad-io = ">=2024.1"
+imageio = "^2.31.1"
+numpy = "<2.0"
+
+[package.source]
+type = "git"
+url = "ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-prediction.git"
+reference = "HEAD"
+resolved_reference = "6d6ba98a9f8db589ad08ee78e17b9f2fe48a1e34"
+
+[[package]]
 name = "commonroad-raceline-planner"
 version = "0.1.1"
 description = "CommonRoad Raceline Planner Toolbox"
-optional = false
+optional = true
 python-versions = "<3.12,>=3.9"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "python_version <= \"3.11\" and extra == \"pypi\""
 files = [
     {file = "commonroad_raceline_planner-0.1.1-py3-none-any.whl", hash = "sha256:428732f87a935963206f900d1ee94a88563247242044c97815b448336495b1d9"},
     {file = "commonroad_raceline_planner-0.1.1.tar.gz", hash = "sha256:9b10edb5079057dc726a66858c1a1bcbb80f66ca80d5418de5a7d5c35d24eb2b"},
@@ -596,13 +847,38 @@ numpy = ">=1.17.4,<2.0"
 quadprog = "<=1.0"
 
 [[package]]
+name = "commonroad-raceline-planner"
+version = "0.1.1"
+description = "CommonRoad Raceline Planner Toolbox"
+optional = true
+python-versions = ">=3.9,<3.12"
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
+files = []
+develop = false
+
+[package.dependencies]
+casadi = "<4.0.0"
+commonroad-io = ">=2022.2"
+cvxpy = "^1.4"
+matplotlib = "<3.9"
+numpy = ">=1.17.4,<2.0"
+quadprog = "<=1.0"
+
+[package.source]
+type = "git"
+url = "ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-raceline-planner.git"
+reference = "HEAD"
+resolved_reference = "7d29eae13a08445a2ca9f59d2d3003560ba1e96b"
+
+[[package]]
 name = "commonroad-reach"
 version = "2025.2.0"
 description = "A Toolbox for Computing Reachable Sets of Automated Vehicles"
 optional = false
 python-versions = "<3.12,>=3.10"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "commonroad_reach-2025.2.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:06ee5d6b997319c6baabeff487c466241760f04a44b37c77cbf8ca5668c3cef0"},
     {file = "commonroad_reach-2025.2.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:5f96632fb0ff99d947c893353a41d86a55a6607a2d32bc57b5505478499d877e"},
@@ -634,10 +910,10 @@ test = ["pytest (>=3.8.0)"]
 name = "commonroad-reactive-planner"
 version = "2025.1"
 description = "CommonRoad Reactive Planner: Sampling-based Frenet Planner"
-optional = false
+optional = true
 python-versions = "<3.12,>=3.9"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "python_version <= \"3.11\" and extra == \"pypi\""
 files = [
     {file = "commonroad_reactive_planner-2025.1-py3-none-any.whl", hash = "sha256:aa15b378cf5a089a69aee8df4d29d2b506d486e9c055db980747342724428e83"},
     {file = "commonroad_reactive_planner-2025.1.tar.gz", hash = "sha256:4995a9b85220a2d4966bea8a4f316dcccc3bc4b4c1cd225b2679cfccdd74e892"},
@@ -659,13 +935,45 @@ scipy = ">=1.5.2"
 triangle = ">=20230923"
 
 [[package]]
+name = "commonroad-reactive-planner"
+version = "2025.1"
+description = "CommonRoad Reactive Planner: Sampling-based Frenet Planner"
+optional = true
+python-versions = ">=3.9,<3.12"
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
+files = []
+develop = false
+
+[package.dependencies]
+commonroad-clcs = "^2025.1.1"
+commonroad-drivability-checker = "^2025.1"
+commonroad-io = "^2024.3"
+commonroad-route-planner = "^2025.1.0"
+commonroad_vehicle_models = ">=3.0.2"
+imageio = ">=2.13.5"
+matplotlib = ">=2.2.2"
+methodtools = "^0.4.5"
+networkx = ">=2.2"
+numpy = ">=1.22"
+omegaconf = ">=2.1.1"
+scipy = ">=1.5.2"
+triangle = ">=20230923"
+
+[package.source]
+type = "git"
+url = "ssh://git@gitlab.lrz.de/cps/reactive-planner.git"
+reference = "HEAD"
+resolved_reference = "6872a915480d89a7353fd8630c4d729b05f40c00"
+
+[[package]]
 name = "commonroad-route-planner"
 version = "2025.1.0"
 description = "Route and reference path planning tool for CommonRoad scenarios"
 optional = false
 python-versions = "<3.12,>=3.9"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "commonroad_route_planner-2025.1.0-py3-none-any.whl", hash = "sha256:88b314882c94b9cf1adb060c3c58b1ef18c42224c4fd5cdc350421527fadf097"},
     {file = "commonroad_route_planner-2025.1.0.tar.gz", hash = "sha256:677a9eaeebeb9e7595e2bd44adf1c65b5832e8267140fdc09c7a6f18e36d1c5d"},
@@ -680,13 +988,88 @@ numpy = ">=1.17.4"
 shapely = ">=1.6.4.post2"
 
 [[package]]
+name = "commonroad-route-planner"
+version = "2025.1.0"
+description = "Route and reference path planning tool for CommonRoad scenarios"
+optional = false
+python-versions = ">=3.9,<3.12"
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
+files = []
+develop = false
+
+[package.dependencies]
+commonroad-clcs = "^2025.1.0"
+commonroad-io = ">=2022.2"
+matplotlib = ">=3.1.2"
+networkx = ">=2.4"
+numpy = ">=1.17.4"
+shapely = ">=1.6.4.post2"
+
+[package.source]
+type = "git"
+url = "ssh://git@gitlab.lrz.de/cps/commonroad-route-planner.git"
+reference = "develop"
+resolved_reference = "9aff016d699ee4b4e848dc2a5199264f63acd5aa"
+
+[[package]]
+name = "commonroad-scenario-designer"
+version = "0.8.4"
+description = "Toolbox for Map Conversion and Scenario Creation for Autonomous Vehicles"
+optional = true
+python-versions = "^3.9,<3.12"
+groups = ["main"]
+markers = "python_version <= \"3.11\" and extra == \"repo\""
+files = []
+develop = false
+
+[package.dependencies]
+antlr4-python3-runtime = "4.9.3"
+commonroad-clcs = "^2025.1"
+commonroad-drivability-checker = "^2025.1"
+commonroad-io = ">=2024.2, <=2024.3"
+eclipse-sumo = "^1.19.0"
+iso3166 = "^2.1.1"
+kdtree = "^0.16"
+lxml = "^4.9.2"
+matplotlib = ">=3.6.0"
+mercantile = "^1.2.1"
+mgrs = ">=1.4.5"
+networkx = "^3.0"
+numpy = "^1.26.4,<2.0"
+omegaconf = "^2.3.0"
+ordered-set = "^4.1.0"
+pandas = "^2.0.2"
+pyclothoids = "^0.1.5"
+pygeodesy = "^23.3.23"
+pymetis = ">=2020.1"
+pyproj = "^3.4.1"
+pyqt6 = ">=6.6.0"
+pyyaml = "6.0"
+requests = "^2.31.0 "
+scipy = "^1.11.3"
+shapely = ">=2.0.1"
+similaritymeasures = ">=0.4.4"
+sumocr = "^2024.1"
+typer = "^0.9.0"
+typing-extensions = "^4.8.0"
+urllib3 = "^2.0.3"
+utm = "^0.7.0"
+
+[package.source]
+type = "git"
+url = "ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-scenario-designer.git"
+reference = "HEAD"
+resolved_reference = "6f56837eacaf69fa5a943802a18fed8aeec8682d"
+
+[[package]]
 name = "commonroad-scenario-factory"
 version = "2.0.0"
 description = "Automated scenario generation for CommonRoad based on SUMO traffic simulations."
-optional = false
+optional = true
 python-versions = ">=3.10"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "python_version <= \"3.11\" and extra == \"pypi\""
 files = [
     {file = "commonroad_scenario_factory-2.0.0-py3-none-any.whl", hash = "sha256:f2e173b874ffc1b6bfc9dce099b19ba49d4a33181de3b9bcf850f727d79338ff"},
     {file = "commonroad_scenario_factory-2.0.0.tar.gz", hash = "sha256:e4b91f796de4799b6f972aa480fb78ec1c640890c051b32be94293b70de82261"},
@@ -736,27 +1119,96 @@ urllib3 = ">=2.0.3,<3.0.0"
 utm = ">=0.7.0,<0.8.0"
 
 [[package]]
-name = "commonroad-sumo"
-version = "2025.1"
-description = "Interface between CommonRoad and the SUMO traffic simulator"
-optional = false
-python-versions = ">=3.9"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
-files = [
-    {file = "commonroad_sumo-2025.1-py3-none-any.whl", hash = "sha256:57b00e6a91af8414d334b0a91f3824d47a9a86175e4b52742f3b3301ba3e3377"},
-    {file = "commonroad_sumo-2025.1.tar.gz", hash = "sha256:4f8dc0244eff7b83d60b9405709af6b09cc8f824296f99a58a6210d8cb3849c0"},
-]
+name = "commonroad-scenario-factory"
+version = "2.0.0"
+description = "Automated scenario generation for CommonRoad based on SUMO traffic simulations."
+optional = true
+python-versions = ">=3.10,<3.12"
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
+files = []
+develop = false
 
 [package.dependencies]
+antlr4-python3-runtime = "4.9.3"
+click = "^8.1"
+commonroad-clcs = ">=2025.1"
+commonroad-crime = ">=0.4.4"
+commonroad-drivability-checker = ">=2025.3.1"
 commonroad-io = ">=2024.3"
-ffmpeg = ">=1.4,<2.0"
+commonroad-labeling = ">=2025.1.1"
+commonroad-ots = ">=2025.1"
+commonroad-route-planner = ">=2025.1.0"
+commonroad-sumo = ">=2025.1"
+eclipse-sumo = "^1.19"
+iso3166 = "^2.0"
+kdtree = "^0.16"
+libsumo = "^1.19"
+lxml = "^4.9.2"
+matplotlib = ">=3.6.0"
+mercantile = "^1.2.1"
+mgrs = ">=1.4.5"
+multiprocess = "^0.70"
+networkx = "^3.0"
+numpy = ">=1.22.4"
+omegaconf = "^2.3.0"
+ordered-set = "^4.1.0"
+osmium = ">=2.16.0"
+pandas = "^2.0.2"
+pyclothoids = "^0.1.5"
+pygeodesy = "^23.3.23"
+pymetis = ">=2020.1"
+pyproj = "^3.4.1"
+pyqt6 = ">=6.6.0"
+pyyaml = "6.0"
+requests = "^2.31.0 "
+scikit-learn = "^1.3"
+scipy = ">=1.15.3"
+shapely = ">=2.0.1"
+similaritymeasures = ">=0.4.4"
+sumocr = "^2024.1"
+typer = "^0.9.0"
+typing-extensions = "^4.12.2"
+urllib3 = "^2.0.3"
+utm = "^0.7.0"
+
+[package.source]
+type = "git"
+url = "ssh://git@gitlab.lrz.de/cps/commonroad/scenario-factory.git"
+reference = "HEAD"
+resolved_reference = "d333a86e342eaa608c7324a443503cff54600df8"
+
+[[package]]
+name = "commonroad-sumo"
+version = "2025.1.1"
+description = "Interface between CommonRoad and the SUMO traffic simulator"
+optional = true
+python-versions = ">=3.10,<4.0"
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
+files = []
+develop = false
+
+[package.dependencies]
+commonroad-io = ">=2024.3,<2025.0"
+ffmpeg = ">=1.4,<2.0.0"
 libsumo = ">=1.19.0,<2.0.0"
 matplotlib = ">=3.0.0,<4.0.0"
-numpy = {version = ">=1.26.1", markers = "python_version < \"3.13\""}
+numpy = {version = ">=1.26.1,<2.0.0", markers = "python_version < \"3.13\""}
 shapely = ">=2.0.0,<3.0.0"
 traci = ">=1.19.0,<2.0.0"
 typing-extensions = ">=4.12.2,<5.0.0"
+
+[package.extras]
+dev = ["pre-commit (>=3.5.0,<4.0.0)"]
+docs = ["mkdocs (>=1.6.0,<2.0.0)", "mkdocs-autorefs (>=1.0.1,<2.0.0)", "mkdocs-material (>=9.6.14,<10.0.0)", "mkdocstrings-python (>=1.10.3,<2.0.0)"]
+test = ["coverage[toml] (>=7.5,<8.0.0)", "parameterized (>=0.8.1,<1.0.0)", "pytest (>=7.4,<8.0.0)", "pytest-mock (>=3.12.0,<4.0.0)"]
+
+[package.source]
+type = "git"
+url = "ssh://git@gitlab.lrz.de/cps/sumo-interface.git"
+reference = "HEAD"
+resolved_reference = "b91dde58798442be613b7be84c91db01ce569b0f"
 
 [[package]]
 name = "commonroad-vehicle-models"
@@ -764,8 +1216,8 @@ version = "3.0.2"
 description = "Implementation of vehicle models with varying abstraction levels ranging from kinematic single track model to a multi-body model."
 optional = false
 python-versions = ">=3.7"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "commonroad-vehicle-models-3.0.2.tar.gz", hash = "sha256:874de3b173f7b39869b69ec8da71690f849766af8623525e3e96f8a33d034f8e"},
     {file = "commonroad_vehicle_models-3.0.2-py3-none-any.whl", hash = "sha256:c8a675ddfdbba0c14521a4479cd820cfb42d03eb549723b00bd9384a434ddd6e"},
@@ -778,10 +1230,10 @@ omegaconf = ">=2.1.1"
 name = "commonroad-velocity-planner"
 version = "1.0.0"
 description = "CommonRoad Velocity Planner Toolbox"
-optional = false
+optional = true
 python-versions = "<3.12,>=3.9"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "python_version <= \"3.11\" and extra == \"pypi\""
 files = [
     {file = "commonroad_velocity_planner-1.0.0-py3-none-any.whl", hash = "sha256:dbb0c79f4d8f88b3701ec832aba929401c58050d229861254b3f4d19a9ebc9f8"},
     {file = "commonroad_velocity_planner-1.0.0.tar.gz", hash = "sha256:8cde4d541958e002e9340a503c730628e48ee81ab838696212c06ce065b14d43"},
@@ -795,13 +1247,37 @@ matplotlib = "<3.9"
 numpy = ">=1.17.4,<2.0"
 
 [[package]]
+name = "commonroad-velocity-planner"
+version = "1.0.0"
+description = "CommonRoad Velocity Planner Toolbox"
+optional = true
+python-versions = ">=3.9,<3.12"
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
+files = []
+develop = false
+
+[package.dependencies]
+commonroad-io = ">=2022.2"
+commonroad-route-planner = "^2025.0.1"
+cvxpy = "^1.4"
+matplotlib = "<3.9"
+numpy = ">=1.17.4,<2.0"
+
+[package.source]
+type = "git"
+url = "ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-velocity-planner.git"
+reference = "HEAD"
+resolved_reference = "a57975cc310badca82c281a692d4371289ae6aa5"
+
+[[package]]
 name = "contourpy"
 version = "1.3.2"
 description = "Python library for calculating contours of 2D quadrilateral grids"
 optional = false
 python-versions = ">=3.10"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "contourpy-1.3.2-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:ba38e3f9f330af820c4b27ceb4b9c7feee5fe0493ea53a8720f4792667465934"},
     {file = "contourpy-1.3.2-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:dc41ba0714aa2968d1f8674ec97504a8f7e334f48eeacebcaa6256213acb0989"},
@@ -876,10 +1352,10 @@ test-no-images = ["pytest", "pytest-cov", "pytest-rerunfailures", "pytest-xdist"
 name = "cvxpy"
 version = "1.7.1"
 description = "A domain-specific language for modeling convex optimization problems in Python."
-optional = false
+optional = true
 python-versions = ">=3.9"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "cvxpy-1.7.1-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:352e8a747c3f65680a68e37c23673de1453f44947ab21df1f29576c4cb452eeb"},
     {file = "cvxpy-1.7.1-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:974a87af97be46727b5b2e6a11da3a636eb51fc94e625935188a7ce073aa8fbf"},
@@ -946,8 +1422,8 @@ version = "0.12.1"
 description = "Composable style cycles"
 optional = false
 python-versions = ">=3.8"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "cycler-0.12.1-py3-none-any.whl", hash = "sha256:85cef7cff222d8644161529808465972e51340599459b8ac3ccbac5a854e0d30"},
     {file = "cycler-0.12.1.tar.gz", hash = "sha256:88bb128f02ba341da8ef447245a9e138fae777f6a23943da4540077d3601eb1c"},
@@ -963,8 +1439,8 @@ version = "3.1.2"
 description = "The Cython compiler for writing C extensions in the Python language."
 optional = false
 python-versions = ">=3.8"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "cython-3.1.2-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:0f2add8b23cb19da3f546a688cd8f9e0bfc2776715ebf5e283bc3113b03ff008"},
     {file = "cython-3.1.2-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:0d6248a2ae155ca4c42d7fa6a9a05154d62e695d7736bc17e1b85da6dcc361df"},
@@ -1034,10 +1510,10 @@ files = [
 name = "decorator"
 version = "5.2.1"
 description = "Decorators for Humans"
-optional = false
+optional = true
 python-versions = ">=3.8"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "decorator-5.2.1-py3-none-any.whl", hash = "sha256:d316bb415a2d9e2d2b3abcc4084c6502fc09240e292cd76a76afc106a1c8e04a"},
     {file = "decorator-5.2.1.tar.gz", hash = "sha256:65f266143752f734b0a7cc83c46f4618af75b8c5911b00ccb61d0ac9b6da0360"},
@@ -1047,10 +1523,10 @@ files = [
 name = "dill"
 version = "0.4.0"
 description = "serialize all of Python"
-optional = false
+optional = true
 python-versions = ">=3.8"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "dill-0.4.0-py3-none-any.whl", hash = "sha256:44f54bf6412c2c8464c14e8243eb163690a9800dbe2c367330883b19c7561049"},
     {file = "dill-0.4.0.tar.gz", hash = "sha256:0633f1d2df477324f53a895b02c901fb961bdbf65a17122586ea7019292cbcf0"},
@@ -1064,10 +1540,10 @@ profile = ["gprof2dot (>=2022.7.29)"]
 name = "docker"
 version = "6.1.3"
 description = "A Python library for the Docker Engine API."
-optional = false
+optional = true
 python-versions = ">=3.7"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "docker-6.1.3-py3-none-any.whl", hash = "sha256:aecd2277b8bf8e506e484f6ab7aec39abe0038e29fa4a6d3ba86c3fe01844ed9"},
     {file = "docker-6.1.3.tar.gz", hash = "sha256:aa6d17830045ba5ef0168d5eaa34d37beeb113948c413affe1d5991fc11f9a20"},
@@ -1087,10 +1563,10 @@ ssh = ["paramiko (>=2.4.3)"]
 name = "dtaidistance"
 version = "2.3.13"
 description = "Distance measures for time series (Dynamic Time Warping, fast C implementation)"
-optional = false
+optional = true
 python-versions = ">=3.8"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "dtaidistance-2.3.13-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:b6a805736778afeb62966ff5dfd78e4f9c6d29667699ba91e3f69d2f2ecadf0e"},
     {file = "dtaidistance-2.3.13-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:0f700efc7bf4c4ff6a13392816c0d50e3ca768f9da4868e3af4d09d38360a1c1"},
@@ -1118,10 +1594,10 @@ viz = ["matplotlib (>=3.0.0)"]
 name = "eclipse-sumo"
 version = "1.24.0"
 description = "A microscopic, multi-modal traffic simulation package"
-optional = false
+optional = true
 python-versions = "*"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "eclipse_sumo-1.24.0-py2.py3-none-macosx_15_0_arm64.whl", hash = "sha256:52bda84d18a430ff1d3765cb8161036ec2240bc8077eb2669b18d3d90d1a29e7"},
     {file = "eclipse_sumo-1.24.0-py2.py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:3169b0fe93b0ccf694cf11a6a0b91916449cf1544c12e04882835390c0d4d417"},
@@ -1133,10 +1609,10 @@ files = [
 name = "exceptiongroup"
 version = "1.3.0"
 description = "Backport of PEP 654 (exception groups)"
-optional = false
+optional = true
 python-versions = ">=3.7"
-groups = ["pypi"]
-markers = "python_version < \"3.11\""
+groups = ["main"]
+markers = "python_version < \"3.11\" and (extra == \"pypi\" or extra == \"repo\")"
 files = [
     {file = "exceptiongroup-1.3.0-py3-none-any.whl", hash = "sha256:4d111e6e0c13d0644cad6ddaa7ed0261a0b36971f6d23e7ec9b4b9097da78a10"},
     {file = "exceptiongroup-1.3.0.tar.gz", hash = "sha256:b241f5885f560bc56a59ee63ca4c6a8bfa46ae4ad651af316d4e81817bb9fd88"},
@@ -1152,10 +1628,10 @@ test = ["pytest (>=6)"]
 name = "executing"
 version = "2.2.0"
 description = "Get the currently executing AST node of a frame, and other information"
-optional = false
+optional = true
 python-versions = ">=3.8"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "executing-2.2.0-py2.py3-none-any.whl", hash = "sha256:11387150cad388d62750327a53d3339fad4888b39a6fe233c3afbb54ecffd3aa"},
     {file = "executing-2.2.0.tar.gz", hash = "sha256:5d108c028108fe2551d1a7b2e8b713341e2cb4fc0aa7dcf966fa4327a5226755"},
@@ -1168,10 +1644,10 @@ tests = ["asttokens (>=2.1.0)", "coverage", "coverage-enable-subprocess", "ipyth
 name = "ffmpeg"
 version = "1.4"
 description = "ffmpeg python package url [https://github.com/jiashaokun/ffmpeg]"
-optional = false
+optional = true
 python-versions = "*"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "ffmpeg-1.4.tar.gz", hash = "sha256:6931692c890ff21d39938433c2189747815dca0c60ddc7f9bb97f199dba0b5b9"},
 ]
@@ -1182,8 +1658,8 @@ version = "4.59.0"
 description = "Tools to manipulate font files"
 optional = false
 python-versions = ">=3.9"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "fonttools-4.59.0-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:524133c1be38445c5c0575eacea42dbd44374b310b1ffc4b60ff01d881fabb96"},
     {file = "fonttools-4.59.0-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:21e606b2d38fed938dde871c5736822dd6bda7a4631b92e509a1f5cd1b90c5df"},
@@ -1246,10 +1722,10 @@ woff = ["brotli (>=1.0.1)", "brotlicffi (>=0.8.0)", "zopfli (>=0.1.4)"]
 name = "grpcio"
 version = "1.74.0"
 description = "HTTP/2-based RPC framework"
-optional = false
+optional = true
 python-versions = ">=3.9"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "grpcio-1.74.0-cp310-cp310-linux_armv7l.whl", hash = "sha256:85bd5cdf4ed7b2d6438871adf6afff9af7096486fcf51818a81b77ef4dd30907"},
     {file = "grpcio-1.74.0-cp310-cp310-macosx_11_0_universal2.whl", hash = "sha256:68c8ebcca945efff9d86d8d6d7bfb0841cf0071024417e2d7f45c5e46b5b08eb"},
@@ -1311,10 +1787,10 @@ protobuf = ["grpcio-tools (>=1.74.0)"]
 name = "idna"
 version = "3.10"
 description = "Internationalized Domain Names in Applications (IDNA)"
-optional = false
+optional = true
 python-versions = ">=3.6"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "idna-3.10-py3-none-any.whl", hash = "sha256:946d195a0d259cbba61165e88e65941f16e9b36ea6ddb97f00452bae8b1287d3"},
     {file = "idna-3.10.tar.gz", hash = "sha256:12f65c9b470abda6dc35cf8e63cc574b1c52b11df2c86030af0ac09b01b13ea9"},
@@ -1329,8 +1805,8 @@ version = "2.37.0"
 description = "Library for reading and writing a wide range of image, video, scientific, and volumetric data formats."
 optional = false
 python-versions = ">=3.9"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "imageio-2.37.0-py3-none-any.whl", hash = "sha256:11efa15b87bc7871b61590326b2d635439acc321cf7f8ce996f812543ce10eed"},
     {file = "imageio-2.37.0.tar.gz", hash = "sha256:71b57b3669666272c818497aebba2b4c5f20d5b37c81720e5e1a56d59c492996"},
@@ -1362,10 +1838,10 @@ tifffile = ["tifffile"]
 name = "iniconfig"
 version = "2.1.0"
 description = "brain-dead simple config-ini parsing"
-optional = false
+optional = true
 python-versions = ">=3.8"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "iniconfig-2.1.0-py3-none-any.whl", hash = "sha256:9deba5723312380e77435581c6bf4935c94cbfab9b1ed33ef8d238ea168eb760"},
     {file = "iniconfig-2.1.0.tar.gz", hash = "sha256:3abbd2e30b36733fee78f9c7f7308f2d0050e88f0087fd25c2645f63c773e1c7"},
@@ -1375,10 +1851,10 @@ files = [
 name = "ipython"
 version = "8.37.0"
 description = "IPython: Productive Interactive Computing"
-optional = false
+optional = true
 python-versions = ">=3.10"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "ipython-8.37.0-py3-none-any.whl", hash = "sha256:ed87326596b878932dbcb171e3e698845434d8c61b8d8cd474bf663041a9dcf2"},
     {file = "ipython-8.37.0.tar.gz", hash = "sha256:ca815841e1a41a1e6b73a0b08f3038af9b2252564d01fc405356d34033012216"},
@@ -1417,8 +1893,8 @@ version = "2.1.1"
 description = "Self-contained ISO 3166-1 country definitions."
 optional = false
 python-versions = ">=3.6"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "iso3166-2.1.1-py3-none-any.whl", hash = "sha256:263660b36f8471c42acd1ff673d28a3715edbce7d24b1550d0cf010f6816c47f"},
     {file = "iso3166-2.1.1.tar.gz", hash = "sha256:fcd551b8dda66b44e9f9e6d6bbbee3a1145a22447c0a556e5d0fb1ad1e491719"},
@@ -1428,10 +1904,10 @@ files = [
 name = "jedi"
 version = "0.19.2"
 description = "An autocompletion tool for Python that can be used for text editors."
-optional = false
+optional = true
 python-versions = ">=3.6"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "jedi-0.19.2-py2.py3-none-any.whl", hash = "sha256:a8ef22bde8490f57fe5c7681a3c83cb58874daf72b4784de3cce5b6ef6edb5b9"},
     {file = "jedi-0.19.2.tar.gz", hash = "sha256:4770dc3de41bde3966b02eb84fbcf557fb33cce26ad23da12c742fb50ecb11f0"},
@@ -1449,10 +1925,10 @@ testing = ["Django", "attrs", "colorama", "docopt", "pytest (<9.0.0)"]
 name = "joblib"
 version = "1.5.1"
 description = "Lightweight pipelining with Python functions"
-optional = false
+optional = true
 python-versions = ">=3.9"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "joblib-1.5.1-py3-none-any.whl", hash = "sha256:4719a31f054c7d766948dcd83e9613686b27114f190f717cec7eaa2084f8a74a"},
     {file = "joblib-1.5.1.tar.gz", hash = "sha256:f4f86e351f39fe3d0d32a9f2c3d8af1ee4cec285aafcb27003dda5205576b444"},
@@ -1462,10 +1938,10 @@ files = [
 name = "jpype1"
 version = "1.6.0"
 description = "A Python to Java bridge"
-optional = false
+optional = true
 python-versions = ">=3.8"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "jpype1-1.6.0-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:533cf7ced58a4b74272f3d1e962fe33f305184d2fcb3856ca79867d5b6f0fb8b"},
     {file = "jpype1-1.6.0-cp310-cp310-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:597063698c074e5bf34e696626423a528cdf099989e22a837e889a0d671fd9e4"},
@@ -1508,10 +1984,10 @@ tests = ["pytest"]
 name = "kdtree"
 version = "0.16"
 description = "A Python implemntation of a kd-tree"
-optional = false
+optional = true
 python-versions = "*"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "kdtree-0.16-py2.py3-none-any.whl", hash = "sha256:083945db69bc3cf0d349d8d0efe66c056de28d1c2f1e81f762dc5ce46f0dcf0a"},
     {file = "kdtree-0.16.tar.gz", hash = "sha256:386df6c7816a05e0fab974e3035df944f99ef68b5615f4a416771391e33d7534"},
@@ -1523,8 +1999,8 @@ version = "1.4.8"
 description = "A fast implementation of the Cassowary constraint solver"
 optional = false
 python-versions = ">=3.10"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "kiwisolver-1.4.8-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:88c6f252f6816a73b1f8c904f7bbe02fd67c09a69f7cb8a0eecdbf5ce78e63db"},
     {file = "kiwisolver-1.4.8-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:c72941acb7b67138f35b879bbe85be0f6c6a70cab78fe3ef6db9c024d9223e5b"},
@@ -1612,10 +2088,10 @@ files = [
 name = "libsumo"
 version = "1.24.0"
 description = "The python version of the libsumo API to communicate with the traffic simulation Eclipse SUMO"
-optional = false
+optional = true
 python-versions = "*"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "libsumo-1.24.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:b31515fc1000fa6d1f1dd54697ff71503dd2687dc6aad592e2604e8ee7c4c997"},
     {file = "libsumo-1.24.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:36b079bd6400dec761b7e251da2a3616c23ec4d76bca7c1d038a1aee63b979af"},
@@ -1649,8 +2125,8 @@ version = "4.9.4"
 description = "Powerful and Pythonic XML processing library combining libxml2/libxslt with the ElementTree API."
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, != 3.4.*"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "lxml-4.9.4-cp27-cp27m-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:e214025e23db238805a600f1f37bf9f9a15413c7bf5f9d6ae194f84980c78722"},
     {file = "lxml-4.9.4-cp27-cp27m-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:ec53a09aee61d45e7dbe7e91252ff0491b6b5fee3d85b2d45b173d8ab453efc1"},
@@ -1756,10 +2232,10 @@ source = ["Cython (==0.29.37)"]
 name = "matplot2tikz"
 version = "0.3.3"
 description = "Convert matplotlib figures into TikZ/PGFPlots"
-optional = false
+optional = true
 python-versions = ">=3.8"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "python_version <= \"3.11\" and extra == \"pypi\""
 files = [
     {file = "matplot2tikz-0.3.3-py3-none-any.whl", hash = "sha256:ff076792b13d924bcfb1350c36626d2afc6ff28466d8b4c76ff6d91c87b9f587"},
     {file = "matplot2tikz-0.3.3.tar.gz", hash = "sha256:ebdfce47b4afb0041071baad9be4f041ab528dbd27772d0d0c29b274572e1238"},
@@ -1778,13 +2254,38 @@ lint = ["mypy", "ruff"]
 test = ["coverage[toml] (==7.3.1)", "pytest (==7.4.1)", "pytest-cov (==4.1.0)", "typeguard (==4.4.0)"]
 
 [[package]]
+name = "matplot2tikz"
+version = "0.4.1"
+description = "Convert matplotlib figures into TikZ/PGFPlots"
+optional = true
+python-versions = ">=3.9"
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
+files = [
+    {file = "matplot2tikz-0.4.1-py3-none-any.whl", hash = "sha256:49ffd84cd36a27ba8b1918d4a7be0c1a0ff3136c5e6457ec0093ca1a1bea9da3"},
+    {file = "matplot2tikz-0.4.1.tar.gz", hash = "sha256:159e35f34f43f5038a6012819606567c65ac3b18ad1e85c5af2231a76afb6014"},
+]
+
+[package.dependencies]
+matplotlib = ">=1.4.0"
+numpy = "*"
+Pillow = "*"
+typing_extensions = ">=4.5"
+webcolors = "*"
+
+[package.extras]
+dev = ["coverage[toml] (>=7.0.0)", "mypy", "pytest (>=7.4.1)", "pytest-cov (>=6.0.0)", "ruff", "tox", "tox-pyenv-redux", "typeguard (>=4.4.0)"]
+lint = ["mypy", "ruff"]
+test = ["coverage[toml] (>=7.0.0)", "pytest (>=7.4.1)", "pytest-cov (>=6.0.0)", "typeguard (>=4.4.0)"]
+
+[[package]]
 name = "matplotlib"
 version = "3.8.4"
 description = "Python plotting package"
 optional = false
 python-versions = ">=3.9"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "matplotlib-3.8.4-cp310-cp310-macosx_10_12_x86_64.whl", hash = "sha256:abc9d838f93583650c35eca41cfcec65b2e7cb50fd486da6f0c49b5e1ed23014"},
     {file = "matplotlib-3.8.4-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:8f65c9f002d281a6e904976007b2d46a1ee2bcea3a68a8c12dda24709ddc9106"},
@@ -1831,10 +2332,10 @@ python-dateutil = ">=2.7"
 name = "matplotlib-inline"
 version = "0.1.7"
 description = "Inline Matplotlib backend for Jupyter"
-optional = false
+optional = true
 python-versions = ">=3.8"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "matplotlib_inline-0.1.7-py3-none-any.whl", hash = "sha256:df192d39a4ff8f21b1895d72e6a13f5fcc5099f00fa84384e0ea28c2cc0653ca"},
     {file = "matplotlib_inline-0.1.7.tar.gz", hash = "sha256:8423b23ec666be3d16e16b60bdd8ac4e86e840ebd1dd11a30b9f117f2fa0ab90"},
@@ -1847,10 +2348,10 @@ traitlets = "*"
 name = "mercantile"
 version = "1.2.1"
 description = "Web mercator XYZ tile utilities"
-optional = false
+optional = true
 python-versions = "*"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "mercantile-1.2.1-py3-none-any.whl", hash = "sha256:30f457a73ee88261aab787b7069d85961a5703bb09dc57a170190bc042cd023f"},
     {file = "mercantile-1.2.1.tar.gz", hash = "sha256:fa3c6db15daffd58454ac198b31887519a19caccee3f9d63d17ae7ff61b3b56b"},
@@ -1867,10 +2368,10 @@ test = ["hypothesis", "pytest"]
 name = "methodtools"
 version = "0.4.7"
 description = "Expand standard functools to methods"
-optional = false
+optional = true
 python-versions = "*"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "methodtools-0.4.7.tar.gz", hash = "sha256:e213439dd64cfe60213f7015da6efe5dd4003fd89376db3baa09fe13ec2bb0ba"},
 ]
@@ -1886,10 +2387,10 @@ test = ["functools32 (>=3.2.3-2)", "pytest (>=4.6.7)", "pytest-cov (>=2.6.1)"]
 name = "mgrs"
 version = "1.5.0"
 description = "MGRS coordinate conversion for Python"
-optional = false
+optional = true
 python-versions = ">=3.9"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "mgrs-1.5.0-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:785e50655360fc14de732591d53479144c2b980bb1f1d8e3130969e7bda28ff2"},
     {file = "mgrs-1.5.0-cp310-cp310-manylinux_2_12_i686.manylinux2010_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:bfa656b865224552c738486629a117f76e20ab0e309d87fa8c94a4f96b8bf555"},
@@ -1934,10 +2435,10 @@ files = [
 name = "multiprocess"
 version = "0.70.18"
 description = "better multiprocessing and multithreading in Python"
-optional = false
+optional = true
 python-versions = ">=3.8"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "multiprocess-0.70.18-pp310-pypy310_pp73-macosx_10_15_x86_64.whl", hash = "sha256:25d4012dcaaf66b9e8e955f58482b42910c2ee526d532844d8bcf661bbc604df"},
     {file = "multiprocess-0.70.18-pp310-pypy310_pp73-macosx_11_0_arm64.whl", hash = "sha256:06b19433de0d02afe5869aec8931dd5c01d99074664f806c73896b0d9e527213"},
@@ -1969,8 +2470,8 @@ version = "3.4.2"
 description = "Python package for creating and manipulating graphs and networks"
 optional = false
 python-versions = ">=3.10"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "networkx-3.4.2-py3-none-any.whl", hash = "sha256:df5d4365b724cf81b8c6a7312509d0c22386097011ad1abe274afd5e9d3bbc5f"},
     {file = "networkx-3.4.2.tar.gz", hash = "sha256:307c3669428c5362aab27c8a1260aa8f47c4e91d3891f48be0141738d8d053e1"},
@@ -1990,8 +2491,8 @@ version = "1.26.4"
 description = "Fundamental package for array computing in Python"
 optional = false
 python-versions = ">=3.9"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "numpy-1.26.4-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:9ff0f4f29c51e2803569d7a51c2304de5554655a60c5d776e35b4a41413830d0"},
     {file = "numpy-1.26.4-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:2e4ee3380d6de9c9ec04745830fd9e2eccb3e6cf790d39d7b98ffd19b0dd754a"},
@@ -2037,8 +2538,8 @@ version = "2.3.0"
 description = "A flexible configuration library"
 optional = false
 python-versions = ">=3.6"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "omegaconf-2.3.0-py3-none-any.whl", hash = "sha256:7b4df175cdb08ba400f45cae3bdcae7ba8365db4d165fc65fd04b050ab63b46b"},
     {file = "omegaconf-2.3.0.tar.gz", hash = "sha256:d5d4b6d29955cc50ad50c46dc269bcd92c6e00f5f90d23ab5fee7bfca4ba4cc7"},
@@ -2054,8 +2555,8 @@ version = "4.11.0.86"
 description = "Wrapper package for OpenCV python bindings."
 optional = false
 python-versions = ">=3.6"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "opencv-python-4.11.0.86.tar.gz", hash = "sha256:03d60ccae62304860d232272e4a4fda93c39d595780cb40b161b310244b736a4"},
     {file = "opencv_python-4.11.0.86-cp37-abi3-macosx_13_0_arm64.whl", hash = "sha256:432f67c223f1dc2824f5e73cdfcd9db0efc8710647d4e813012195dc9122a52a"},
@@ -2068,19 +2569,19 @@ files = [
 
 [package.dependencies]
 numpy = [
-    {version = ">=1.23.5", markers = "python_version >= \"3.11\""},
     {version = ">=1.21.4", markers = "python_version >= \"3.10\" and platform_system == \"Darwin\" and python_version < \"3.11\""},
     {version = ">=1.21.2", markers = "platform_system != \"Darwin\" and python_version >= \"3.10\" and python_version < \"3.11\""},
+    {version = ">=1.23.5", markers = "python_version >= \"3.11\""},
 ]
 
 [[package]]
 name = "opentrafficsim"
 version = "1.7.5"
 description = "Python package which includes Opentrafficsim (OTS)"
-optional = false
+optional = true
 python-versions = ">=3.8"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "opentrafficsim-1.7.5-py3-none-any.whl", hash = "sha256:5647d91ed75499cee25f1b9d6610ed6645ae0a2c1f209e5487df3365dee1a85b"},
     {file = "opentrafficsim-1.7.5.tar.gz", hash = "sha256:4abcee60fc90105fcbe90c6c9a62b092391cb1b15c5c62da694528a952f76e03"},
@@ -2090,10 +2591,10 @@ files = [
 name = "ordered-set"
 version = "4.1.0"
 description = "An OrderedSet is a custom MutableSet that remembers its order, so that every"
-optional = false
+optional = true
 python-versions = ">=3.7"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "ordered-set-4.1.0.tar.gz", hash = "sha256:694a8e44c87657c59292ede72891eb91d34131f6531463aab3009191c77364a8"},
     {file = "ordered_set-4.1.0-py3-none-any.whl", hash = "sha256:046e1132c71fcf3330438a539928932caf51ddbc582496833e23de611de14562"},
@@ -2106,10 +2607,10 @@ dev = ["black", "mypy", "pytest"]
 name = "osmium"
 version = "4.0.2"
 description = "Python bindings for libosmium, the data processing library for OSM data"
-optional = false
+optional = true
 python-versions = ">=3.7"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "osmium-4.0.2-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:397a40028994c66e8eb26b93c1b77db955943cc4dcf596bdcfcf3fbf5d11785c"},
     {file = "osmium-4.0.2-cp310-cp310-macosx_11_0_x86_64.whl", hash = "sha256:391c49663004eddd671a202a8a65f27a886f52b6389ebe407666c25017f59a08"},
@@ -2158,8 +2659,8 @@ version = "0.6.7.post3"
 description = "OSQP: The Operator Splitting QP Solver"
 optional = false
 python-versions = "*"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "osqp-0.6.7.post3-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:f751ca1332b480753cfe3c08bf14ca66259bf69679b572e1f8095ad3e26b201d"},
     {file = "osqp-0.6.7.post3-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:a1b30df65f2d938452e3bd2ca11388b5b16ec7406daedfc4b9dce3747c282e44"},
@@ -2216,8 +2717,8 @@ version = "23.2"
 description = "Core utilities for Python packages"
 optional = false
 python-versions = ">=3.7"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "packaging-23.2-py3-none-any.whl", hash = "sha256:8c491190033a9af7e1d931d0b5dacc2ef47509b34dd0de67ed209b5203fc88c7"},
     {file = "packaging-23.2.tar.gz", hash = "sha256:048fb0e9405036518eaaf48a55953c750c11e1a1b68e0dd1a9d62ed0c092cfc5"},
@@ -2229,8 +2730,8 @@ version = "2.3.1"
 description = "Powerful data structures for data analysis, time series, and statistics"
 optional = false
 python-versions = ">=3.9"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "pandas-2.3.1-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:22c2e866f7209ebc3a8f08d75766566aae02bcc91d196935a1d9e59c7b990ac9"},
     {file = "pandas-2.3.1-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:3583d348546201aff730c8c47e49bc159833f971c2899d6097bce68b9112a4f1"},
@@ -2278,8 +2779,8 @@ files = [
 
 [package.dependencies]
 numpy = [
-    {version = ">=1.23.2", markers = "python_version == \"3.11\""},
     {version = ">=1.22.4", markers = "python_version < \"3.11\""},
+    {version = ">=1.23.2", markers = "python_version == \"3.11\""},
 ]
 python-dateutil = ">=2.8.2"
 pytz = ">=2020.1"
@@ -2314,10 +2815,10 @@ xml = ["lxml (>=4.9.2)"]
 name = "parso"
 version = "0.8.4"
 description = "A Python Parser"
-optional = false
+optional = true
 python-versions = ">=3.6"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "parso-0.8.4-py2.py3-none-any.whl", hash = "sha256:a418670a20291dacd2dddc80c377c5c3791378ee1e8d12bffc35420643d43f18"},
     {file = "parso-0.8.4.tar.gz", hash = "sha256:eb3a7b58240fb99099a345571deecc0f9540ea5f4dd2fe14c2a99d6b281ab92d"},
@@ -2331,10 +2832,10 @@ testing = ["docopt", "pytest"]
 name = "pexpect"
 version = "4.9.0"
 description = "Pexpect allows easy control of interactive console applications."
-optional = false
+optional = true
 python-versions = "*"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\" and (sys_platform != \"win32\" and sys_platform != \"emscripten\")"
+groups = ["main"]
+markers = "(sys_platform != \"win32\" and sys_platform != \"emscripten\") and (extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "pexpect-4.9.0-py2.py3-none-any.whl", hash = "sha256:7236d1e080e4936be2dc3e326cec0af72acf9212a7e1d060210e70a47e253523"},
     {file = "pexpect-4.9.0.tar.gz", hash = "sha256:ee7d41123f3c9911050ea2c2dac107568dc43b2d3b0c7557a33212c398ead30f"},
@@ -2349,8 +2850,8 @@ version = "10.4.0"
 description = "Python Imaging Library (Fork)"
 optional = false
 python-versions = ">=3.8"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "pillow-10.4.0-cp310-cp310-macosx_10_10_x86_64.whl", hash = "sha256:4d9667937cfa347525b319ae34375c37b9ee6b525440f3ef48542fcf66f2731e"},
     {file = "pillow-10.4.0-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:543f3dc61c18dafb755773efc89aae60d06b6596a63914107f75459cf984164d"},
@@ -2446,10 +2947,10 @@ xmp = ["defusedxml"]
 name = "pluggy"
 version = "1.6.0"
 description = "plugin and hook calling mechanisms for python"
-optional = false
+optional = true
 python-versions = ">=3.9"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "pluggy-1.6.0-py3-none-any.whl", hash = "sha256:e920276dd6813095e9377c0bc5566d94c932c33b27a3e3945d8389c374dd4746"},
     {file = "pluggy-1.6.0.tar.gz", hash = "sha256:7dcc130b76258d33b90f61b658791dede3486c3e6bfb003ee5c9bfb396dd22f3"},
@@ -2465,8 +2966,8 @@ version = "3.0.9.1"
 description = "Polygon3 is a Python-3 package that handles polygonal shapes in 2D"
 optional = false
 python-versions = "*"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "Polygon3-3.0.9.1.tar.gz", hash = "sha256:2ddf8d06975f728d5b40786136c82e5b9d38a846bce236b7e6587bbd6a5e9b49"},
 ]
@@ -2475,10 +2976,10 @@ files = [
 name = "prompt-toolkit"
 version = "3.0.51"
 description = "Library for building powerful interactive command lines in Python"
-optional = false
+optional = true
 python-versions = ">=3.8"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "prompt_toolkit-3.0.51-py3-none-any.whl", hash = "sha256:52742911fde84e2d423e2f9a4cf1de7d7ac4e51958f648d9540e0fb8db077b07"},
     {file = "prompt_toolkit-3.0.51.tar.gz", hash = "sha256:931a162e3b27fc90c86f1b48bb1fb2c528c2761475e57c9c06de13311c7b54ed"},
@@ -2493,8 +2994,8 @@ version = "3.20.2"
 description = "Protocol Buffers"
 optional = false
 python-versions = ">=3.7"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "protobuf-3.20.2-cp310-cp310-manylinux2014_aarch64.whl", hash = "sha256:09e25909c4297d71d97612f04f41cea8fa8510096864f2835ad2f3b3df5a5559"},
     {file = "protobuf-3.20.2-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:e8fbc522303e09036c752a0afcc5c0603e917222d8bedc02813fd73b4b4ed804"},
@@ -2524,10 +3025,10 @@ files = [
 name = "ptyprocess"
 version = "0.7.0"
 description = "Run a subprocess in a pseudo terminal"
-optional = false
+optional = true
 python-versions = "*"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\" and (sys_platform != \"win32\" and sys_platform != \"emscripten\")"
+groups = ["main"]
+markers = "(sys_platform != \"win32\" and sys_platform != \"emscripten\") and (extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "ptyprocess-0.7.0-py2.py3-none-any.whl", hash = "sha256:4b41f3967fce3af57cc7e94b888626c18bf37a083e3651ca8feeb66d492fef35"},
     {file = "ptyprocess-0.7.0.tar.gz", hash = "sha256:5c5d0a3b48ceee0b48485e0c26037c0acd7d29765ca3fbb5cb3831d347423220"},
@@ -2537,10 +3038,10 @@ files = [
 name = "pure-eval"
 version = "0.2.3"
 description = "Safely evaluate AST nodes without side effects"
-optional = false
+optional = true
 python-versions = "*"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "pure_eval-0.2.3-py3-none-any.whl", hash = "sha256:1db8e35b67b3d218d818ae653e27f06c3aa420901fa7b081ca98cbedc874e0d0"},
     {file = "pure_eval-0.2.3.tar.gz", hash = "sha256:5f4e983f40564c576c7c8635ae88db5956bb2229d7e9237d03b3c0b0190eaf42"},
@@ -2553,10 +3054,10 @@ tests = ["pytest"]
 name = "pybind11"
 version = "3.0.0"
 description = "Seamless operability between C++11 and Python"
-optional = false
+optional = true
 python-versions = ">=3.8"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "pybind11-3.0.0-py3-none-any.whl", hash = "sha256:7c5cac504da5a701b5163f0e6a7ba736c713a096a5378383c5b4b064b753f607"},
     {file = "pybind11-3.0.0.tar.gz", hash = "sha256:c3f07bce3ada51c3e4b76badfa85df11688d12c46111f9d242bc5c9415af7862"},
@@ -2569,10 +3070,10 @@ global = ["pybind11-global (==3.0.0)"]
 name = "pyclothoids"
 version = "0.1.5"
 description = "A library for clothoid curves in Python"
-optional = false
+optional = true
 python-versions = "*"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "pyclothoids-0.1.5-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:b00b55be0b1ff63ec5ac3b6875c0891a7c117163fed2b830e1d679a6eb810a0a"},
     {file = "pyclothoids-0.1.5-cp310-cp310-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:e9cc6c08ebcefd6c0950c43ff6698eccf9fd21eb208ce9f5ff5adc336710f439"},
@@ -2638,10 +3139,10 @@ pybind11 = ">=2.4"
 name = "pycparser"
 version = "2.22"
 description = "C parser in Python"
-optional = false
+optional = true
 python-versions = ">=3.8"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "pycparser-2.22-py3-none-any.whl", hash = "sha256:c3702b6d3dd8c7abc1afa565d7e63d53a1d0bd86cdc24edd75470f4de499cfcc"},
     {file = "pycparser-2.22.tar.gz", hash = "sha256:491c8be9c040f5390f5bf44a5b07752bd07f56edf992381b05c701439eec10f6"},
@@ -2651,10 +3152,10 @@ files = [
 name = "pygeodesy"
 version = "23.12.29"
 description = "Pure Python geodesy tools"
-optional = false
+optional = true
 python-versions = "*"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "PyGeodesy-23.12.29-py2.py3-none-any.whl", hash = "sha256:509b63d5e122d1ccdb3167046d9499c0df466c4a7a09ead1173fbffbaed23418"},
     {file = "PyGeodesy-23.12.29.zip", hash = "sha256:725ef47874c3785369178efe0b2a531bedc22119e37944e8828c961f925766ed"},
@@ -2664,10 +3165,10 @@ files = [
 name = "pygments"
 version = "2.19.2"
 description = "Pygments is a syntax highlighting package written in Python."
-optional = false
+optional = true
 python-versions = ">=3.8"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "pygments-2.19.2-py3-none-any.whl", hash = "sha256:86540386c03d588bb81d44bc3928634ff26449851e99741617ecb9037ee5ec0b"},
     {file = "pygments-2.19.2.tar.gz", hash = "sha256:636cb2477cec7f8952536970bc533bc43743542f70392ae026374600add5b887"},
@@ -2680,10 +3181,10 @@ windows-terminal = ["colorama (>=0.4.6)"]
 name = "pymetis"
 version = "2025.2.1"
 description = "A graph partitioning package"
-optional = false
+optional = true
 python-versions = ">=3.10"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "pymetis-2025.2.1-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:e267b19f4d299d3f7e7f6918b5864b077776755b5217f90f68c3927f4e569295"},
     {file = "pymetis-2025.2.1-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:f6ebd6b8e5cc70339f30f812840bf8da4e231448078bc36befacf2f5aec8ac69"},
@@ -2717,8 +3218,8 @@ version = "3.2.3"
 description = "pyparsing module - Classes and methods to define and execute parsing grammars"
 optional = false
 python-versions = ">=3.9"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "pyparsing-3.2.3-py3-none-any.whl", hash = "sha256:a749938e02d6fd0b59b356ca504a24982314bb090c383e3cf201c95ef7e2bfcf"},
     {file = "pyparsing-3.2.3.tar.gz", hash = "sha256:b9c13f1ab8b3b542f72e28f634bad4de758ab3ce4546e4301970ad6fa77c38be"},
@@ -2731,10 +3232,10 @@ diagrams = ["jinja2", "railroad-diagrams"]
 name = "pyperclip"
 version = "1.9.0"
 description = "A cross-platform clipboard module for Python. (Only handles plain text for now.)"
-optional = false
+optional = true
 python-versions = "*"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "pyperclip-1.9.0.tar.gz", hash = "sha256:b7de0142ddc81bfc5c7507eea19da920b92252b548b96186caf94a5e2527d310"},
 ]
@@ -2743,10 +3244,10 @@ files = [
 name = "pyproj"
 version = "3.7.1"
 description = "Python interface to PROJ (cartographic projections and coordinate transformations library)"
-optional = false
+optional = true
 python-versions = ">=3.10"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "pyproj-3.7.1-cp310-cp310-macosx_13_0_x86_64.whl", hash = "sha256:bf09dbeb333c34e9c546364e7df1ff40474f9fddf9e70657ecb0e4f670ff0b0e"},
     {file = "pyproj-3.7.1-cp310-cp310-macosx_14_0_arm64.whl", hash = "sha256:6575b2e53cc9e3e461ad6f0692a5564b96e7782c28631c7771c668770915e169"},
@@ -2790,10 +3291,10 @@ certifi = "*"
 name = "pyqt6"
 version = "6.9.1"
 description = "Python bindings for the Qt cross platform application toolkit"
-optional = false
+optional = true
 python-versions = ">=3.9"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "pyqt6-6.9.1-cp39-abi3-macosx_10_14_universal2.whl", hash = "sha256:33c23d28f6608747ecc8bfd04c8795f61631af9db4fb1e6c2a7523ec4cc916d9"},
     {file = "pyqt6-6.9.1-cp39-abi3-manylinux_2_28_x86_64.whl", hash = "sha256:37884df27f774e2e1c0c96fa41e817a222329b80ffc6241725b0dc8c110acb35"},
@@ -2811,10 +3312,10 @@ PyQt6-sip = ">=13.8,<14"
 name = "pyqt6-qt6"
 version = "6.9.1"
 description = "The subset of a Qt installation needed by PyQt6."
-optional = false
+optional = true
 python-versions = "*"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "pyqt6_qt6-6.9.1-py3-none-macosx_10_14_x86_64.whl", hash = "sha256:3854c7f83ee4e8c2d91e23ab88b77f90e2ca7ace34fe72f634a446959f2b4d4a"},
     {file = "pyqt6_qt6-6.9.1-py3-none-macosx_11_0_arm64.whl", hash = "sha256:123e4aeb037c099bb4696a3ea8edcb1d9d62cedd0b2b950556b26024c97f3293"},
@@ -2828,10 +3329,10 @@ files = [
 name = "pyqt6-sip"
 version = "13.10.2"
 description = "The sip module support for PyQt6"
-optional = false
+optional = true
 python-versions = ">=3.9"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "pyqt6_sip-13.10.2-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:8132ec1cbbecc69d23dcff23916ec07218f1a9bbbc243bf6f1df967117ce303e"},
     {file = "pyqt6_sip-13.10.2-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:07f77e89d93747dda71b60c3490b00d754451729fbcbcec840e42084bf061655"},
@@ -2863,10 +3364,10 @@ files = [
 name = "pytest"
 version = "8.4.1"
 description = "pytest: simple powerful testing with Python"
-optional = false
+optional = true
 python-versions = ">=3.9"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "pytest-8.4.1-py3-none-any.whl", hash = "sha256:539c70ba6fcead8e78eebbf1115e8b589e7565830d7d006a8723f19ac8a0afb7"},
     {file = "pytest-8.4.1.tar.gz", hash = "sha256:7c67fd69174877359ed9371ec3af8a3d2b04741818c51e5e99cc1742251fa93c"},
@@ -2890,8 +3391,8 @@ version = "2.9.0.post0"
 description = "Extensions to the standard Python datetime module"
 optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,>=2.7"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "python-dateutil-2.9.0.post0.tar.gz", hash = "sha256:37dd54208da7e1cd875388217d5e00ebd4179249f90fb72437e91a35459a0ad3"},
     {file = "python_dateutil-2.9.0.post0-py2.py3-none-any.whl", hash = "sha256:a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427"},
@@ -2906,8 +3407,8 @@ version = "2025.2"
 description = "World timezone definitions, modern and historical"
 optional = false
 python-versions = "*"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "pytz-2025.2-py2.py3-none-any.whl", hash = "sha256:5ddf76296dd8c44c26eb8f4b6f35488f3ccbf6fbbd7adee0b7262d43f0ec2f00"},
     {file = "pytz-2025.2.tar.gz", hash = "sha256:360b9e3dbb49a209c21ad61809c7fb453643e048b38924c765813546746e81c3"},
@@ -2917,10 +3418,10 @@ files = [
 name = "pywin32"
 version = "311"
 description = "Python for Window Extensions"
-optional = false
+optional = true
 python-versions = "*"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\" and sys_platform == \"win32\""
+groups = ["main"]
+markers = "sys_platform == \"win32\" and (extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "pywin32-311-cp310-cp310-win32.whl", hash = "sha256:d03ff496d2a0cd4a5893504789d4a15399133fe82517455e78bad62efbb7f0a3"},
     {file = "pywin32-311-cp310-cp310-win_amd64.whl", hash = "sha256:797c2772017851984b97180b0bebe4b620bb86328e8a884bb626156295a63b3b"},
@@ -2950,8 +3451,8 @@ version = "6.0"
 description = "YAML parser and emitter for Python"
 optional = false
 python-versions = ">=3.6"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "PyYAML-6.0-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:d4db7c7aef085872ef65a8fd7d6d09a14ae91f691dec3e87ee5ee0539d516f53"},
     {file = "PyYAML-6.0-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:9df7ed3b3d2e0ecfe09e14741b857df43adb5a3ddadc919a2d94fbdf78fea53c"},
@@ -3001,8 +3502,8 @@ version = "0.1.7.post5"
 description = "QDLDL, a free LDL factorization routine."
 optional = false
 python-versions = "*"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "qdldl-0.1.7.post5-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:882658853edd24a7d16912af29e77320e061b150b4ed7cf94fd01907f2e925b4"},
     {file = "qdldl-0.1.7.post5-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:e30a80d71ab5889a1e169304b12bc3ab69210775f6428153873584ff8dfb50e5"},
@@ -3053,10 +3554,10 @@ scipy = ">=0.13.2"
 name = "quadprog"
 version = "0.1.13"
 description = "Quadratic Programming Solver"
-optional = false
+optional = true
 python-versions = ">=3.9"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "quadprog-0.1.13-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:25fda45c9fbcfa832d30ff54fff5f499572aa9f258bcb33d0ddd767a84aa57c8"},
     {file = "quadprog-0.1.13-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:e45501cf7765b47abb4cba100b695cae1a5f110df157209d0a123f17634225ed"},
@@ -3088,10 +3589,10 @@ numpy = "*"
 name = "requests"
 version = "2.32.4"
 description = "Python HTTP for Humans."
-optional = false
+optional = true
 python-versions = ">=3.8"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "requests-2.32.4-py3-none-any.whl", hash = "sha256:27babd3cda2a6d50b30443204ee89830707d396671944c998b5975b031ac2b2c"},
     {file = "requests-2.32.4.tar.gz", hash = "sha256:27d0316682c8a29834d3264820024b62a36942083d52caf2f14c0591336d3422"},
@@ -3113,8 +3614,8 @@ version = "1.4.0"
 description = "R-Tree spatial index for Python GIS"
 optional = false
 python-versions = ">=3.9"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "rtree-1.4.0-py3-none-macosx_10_9_x86_64.whl", hash = "sha256:4d1bebc418101480aabf41767e772dd2155d3b27b1376cccbd93e4509485e091"},
     {file = "rtree-1.4.0-py3-none-macosx_11_0_arm64.whl", hash = "sha256:997f8c38d5dffa3949ea8adb4c8b291ea5cd4ef5ee69455d642dd171baf9991d"},
@@ -3132,10 +3633,10 @@ files = [
 name = "scikit-learn"
 version = "1.7.1"
 description = "A set of python modules for machine learning and data mining"
-optional = false
+optional = true
 python-versions = ">=3.10"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "scikit_learn-1.7.1-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:406204dd4004f0517f0b23cf4b28c6245cbd51ab1b6b78153bc784def214946d"},
     {file = "scikit_learn-1.7.1-cp310-cp310-macosx_12_0_arm64.whl", hash = "sha256:16af2e44164f05d04337fd1fc3ae7c4ea61fd9b0d527e22665346336920fe0e1"},
@@ -3186,8 +3687,8 @@ version = "1.15.3"
 description = "Fundamental algorithms for scientific computing in Python"
 optional = false
 python-versions = ">=3.10"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "scipy-1.15.3-cp310-cp310-macosx_10_13_x86_64.whl", hash = "sha256:a345928c86d535060c9c2b25e71e87c39ab2f22fc96e9636bd74d1dbf9de448c"},
     {file = "scipy-1.15.3-cp310-cp310-macosx_12_0_arm64.whl", hash = "sha256:ad3432cb0f9ed87477a8d97f03b763fd1d57709f1bbde3c9369b1dff5503b253"},
@@ -3249,10 +3750,10 @@ test = ["Cython", "array-api-strict (>=2.0,<2.1.1)", "asv", "gmpy2", "hypothesis
 name = "scs"
 version = "3.2.7.post2"
 description = "Splitting conic solver"
-optional = false
+optional = true
 python-versions = ">=3.7"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "scs-3.2.7.post2-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:b7271ff566ac9df929c8cf7d1b024b89c3882b541c21a7a6d9aa94480822bccb"},
     {file = "scs-3.2.7.post2-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:eb2997f53ef3426934599517c6e0e77f4f05cc23c3aa2380fd176c7fd22bc0c8"},
@@ -3306,8 +3807,8 @@ version = "0.13.2"
 description = "Statistical data visualization"
 optional = false
 python-versions = ">=3.8"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "seaborn-0.13.2-py3-none-any.whl", hash = "sha256:636f8336facf092165e27924f223d3c62ca560b1f2bb5dff7ab7fad265361987"},
     {file = "seaborn-0.13.2.tar.gz", hash = "sha256:93e60a40988f4d65e9f4885df477e2fdaff6b73a9ded434c1ab356dd57eefff7"},
@@ -3329,8 +3830,8 @@ version = "2.1.1"
 description = "Manipulation and analysis of geometric objects"
 optional = false
 python-versions = ">=3.10"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "shapely-2.1.1-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:d8ccc872a632acb7bdcb69e5e78df27213f7efd195882668ffba5405497337c6"},
     {file = "shapely-2.1.1-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:f24f2ecda1e6c091da64bcbef8dd121380948074875bd1b247b3d17e99407099"},
@@ -3386,10 +3887,10 @@ test = ["pytest", "pytest-cov", "scipy-doctest"]
 name = "similaritymeasures"
 version = "1.3.0"
 description = "Quantify the difference between two arbitrary curves in space"
-optional = false
+optional = true
 python-versions = ">=3.8"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "similaritymeasures-1.3.0-py3-none-any.whl", hash = "sha256:8171e98078fe327f78ee4acacef08c5e8d329d65d3700b4802d27590770b3e30"},
     {file = "similaritymeasures-1.3.0.tar.gz", hash = "sha256:f1906c21c3f7dd7c232c8ba04352fff608df6d3082344173f7c7b0c2e396c5d4"},
@@ -3405,8 +3906,8 @@ version = "1.17.0"
 description = "Python 2 and 3 compatibility utilities"
 optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,>=2.7"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "six-1.17.0-py2.py3-none-any.whl", hash = "sha256:4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274"},
     {file = "six-1.17.0.tar.gz", hash = "sha256:ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81"},
@@ -3416,10 +3917,10 @@ files = [
 name = "stack-data"
 version = "0.6.3"
 description = "Extract data from python stack frames and tracebacks for informative displays"
-optional = false
+optional = true
 python-versions = "*"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "stack_data-0.6.3-py3-none-any.whl", hash = "sha256:d5558e0c25a4cb0853cddad3d77da9891a08cb85dd9f9f91b9f8cd66e511e695"},
     {file = "stack_data-0.6.3.tar.gz", hash = "sha256:836a778de4fec4dcd1dcd89ed8abff8a221f58308462e1c4aa2a3cf30148f0b9"},
@@ -3437,10 +3938,10 @@ tests = ["cython", "littleutils", "pygments", "pytest", "typeguard"]
 name = "sumocr"
 version = "2024.1"
 description = "Python tool to interface with the SUMO traffic simulator"
-optional = false
+optional = true
 python-versions = "<4.0,>=3.8"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "sumocr-2024.1-py3-none-any.whl", hash = "sha256:7d7bc53b71e89dbb0353e6a6004c138496c69391d03ed07d2d18d45664f4c23c"},
     {file = "sumocr-2024.1.tar.gz", hash = "sha256:f4fac380d99f68670eafbce74752f14f6f0d5362058c9c84b8e7d7eba10800c6"},
@@ -3465,10 +3966,10 @@ traci = ">=1.19.0,<2.0.0"
 name = "sumolib"
 version = "1.24.0"
 description = "Python helper modules to read networks, parse output data and do other useful stuff related to the traffic simulation Eclipse SUMO"
-optional = false
+optional = true
 python-versions = "*"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "sumolib-1.24.0-py3-none-any.whl", hash = "sha256:d4e8c0315dd240af60665cb7c0f34f876abf91daab73f53c17a5c8284c0acd5d"},
 ]
@@ -3480,10 +3981,10 @@ visualization = ["matplotlib"]
 name = "threadpoolctl"
 version = "3.6.0"
 description = "threadpoolctl"
-optional = false
+optional = true
 python-versions = ">=3.9"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "threadpoolctl-3.6.0-py3-none-any.whl", hash = "sha256:43a0b8fd5a2928500110039e43a5eed8480b918967083ea48dc3ab9f13c4a7fb"},
     {file = "threadpoolctl-3.6.0.tar.gz", hash = "sha256:8ab8b4aa3491d812b623328249fab5302a68d2d71745c8a4c719a2fcaba9f44e"},
@@ -3493,10 +3994,10 @@ files = [
 name = "tomli"
 version = "2.2.1"
 description = "A lil' TOML parser"
-optional = false
+optional = true
 python-versions = ">=3.8"
-groups = ["pypi"]
-markers = "python_version < \"3.11\""
+groups = ["main"]
+markers = "python_version < \"3.11\" and (extra == \"pypi\" or extra == \"repo\")"
 files = [
     {file = "tomli-2.2.1-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:678e4fa69e4575eb77d103de3df8a895e1591b48e740211bd1067378c69e8249"},
     {file = "tomli-2.2.1-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:023aa114dd824ade0100497eb2318602af309e5a55595f76b626d6d9f3b7b0a6"},
@@ -3538,8 +4039,8 @@ version = "4.67.1"
 description = "Fast, Extensible Progress Meter"
 optional = false
 python-versions = ">=3.7"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "tqdm-4.67.1-py3-none-any.whl", hash = "sha256:26445eca388f82e72884e0d580d5464cd801a3ea01e63e5601bdff9ba6a48de2"},
     {file = "tqdm-4.67.1.tar.gz", hash = "sha256:f8aef9c52c08c13a65f30ea34f4e5aac3fd1a34959879d7e59e63027286627f2"},
@@ -3559,10 +4060,10 @@ telegram = ["requests"]
 name = "traci"
 version = "1.24.0"
 description = "The pure python version of the TraCI API to communicate with the traffic simulation Eclipse SUMO"
-optional = false
+optional = true
 python-versions = "*"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "traci-1.24.0-py3-none-any.whl", hash = "sha256:eb273d596d7279cbe5734ec23297e8689b78526d43089f7e21a9f3fb3de4fdea"},
 ]
@@ -3574,10 +4075,10 @@ sumolib = ">=1.24.0"
 name = "traitlets"
 version = "5.14.3"
 description = "Traitlets Python configuration system"
-optional = false
+optional = true
 python-versions = ">=3.8"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "traitlets-5.14.3-py3-none-any.whl", hash = "sha256:b74e89e397b1ed28cc831db7aea759ba6640cb3de13090ca145426688ff1ac4f"},
     {file = "traitlets-5.14.3.tar.gz", hash = "sha256:9ed0579d3502c94b4b3732ac120375cda96f923114522847de4b3bb98b96b6b7"},
@@ -3591,10 +4092,10 @@ test = ["argcomplete (>=3.0.3)", "mypy (>=1.7.0)", "pre-commit", "pytest (>=7.0,
 name = "triangle"
 version = "20250106"
 description = "Python binding to the triangle library"
-optional = false
+optional = true
 python-versions = ">=3.7"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "triangle-20250106-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:5eb99ec1002f164b7a40bec47c9915818231c3563f3900d973b6a2cb2befef9d"},
     {file = "triangle-20250106-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:d32c36a7188234a225a41f98224e430eae48ba252942696f2a7c83693a41fd0f"},
@@ -3642,10 +4143,10 @@ test = ["pytest"]
 name = "typer"
 version = "0.9.4"
 description = "Typer, build great CLIs. Easy to code. Based on Python type hints."
-optional = false
+optional = true
 python-versions = ">=3.6"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "typer-0.9.4-py3-none-any.whl", hash = "sha256:aa6c4a4e2329d868b80ecbaf16f807f2b54e192209d7ac9dd42691d63f7a54eb"},
     {file = "typer-0.9.4.tar.gz", hash = "sha256:f714c2d90afae3a7929fcd72a3abb08df305e1ff61719381384211c4070af57f"},
@@ -3665,10 +4166,10 @@ test = ["black (>=22.3.0,<23.0.0)", "coverage (>=6.2,<7.0)", "isort (>=5.0.6,<6.
 name = "typing-extensions"
 version = "4.14.1"
 description = "Backported and Experimental Type Hints for Python 3.9+"
-optional = false
+optional = true
 python-versions = ">=3.9"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "typing_extensions-4.14.1-py3-none-any.whl", hash = "sha256:d1e1e3b58374dc93031d6eda2420a48ea44a36c2b4766a4fdeb3710755731d76"},
     {file = "typing_extensions-4.14.1.tar.gz", hash = "sha256:38b39f4aeeab64884ce9f74c94263ef78f3c22467c8724005483154c26648d36"},
@@ -3680,8 +4181,8 @@ version = "2025.2"
 description = "Provider of IANA time zone data"
 optional = false
 python-versions = ">=2"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "tzdata-2025.2-py2.py3-none-any.whl", hash = "sha256:1a403fada01ff9221ca8044d701868fa132215d84beb92242d9acd2147f667a8"},
     {file = "tzdata-2025.2.tar.gz", hash = "sha256:b60a638fcc0daffadf82fe0f57e53d06bdec2f36c4df66280ae79bce6bd6f2b9"},
@@ -3691,10 +4192,10 @@ files = [
 name = "urllib3"
 version = "2.5.0"
 description = "HTTP library with thread-safe connection pooling, file post, and more."
-optional = false
+optional = true
 python-versions = ">=3.9"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "urllib3-2.5.0-py3-none-any.whl", hash = "sha256:e6b01673c0fa6a13e374b50871808eb3bf7046c4b125b216f6bf1cc604cff0dc"},
     {file = "urllib3-2.5.0.tar.gz", hash = "sha256:3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760"},
@@ -3710,10 +4211,10 @@ zstd = ["zstandard (>=0.18.0)"]
 name = "utm"
 version = "0.7.0"
 description = "Bidirectional UTM-WGS84 converter for python"
-optional = false
+optional = true
 python-versions = "*"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "utm-0.7.0.tar.gz", hash = "sha256:3c9a3650e98bb6eecec535418d0dfd4db8f88c8ceaca112a0ff0787e116566e2"},
 ]
@@ -3722,10 +4223,10 @@ files = [
 name = "wcwidth"
 version = "0.2.13"
 description = "Measures the displayed width of unicode strings in a terminal"
-optional = false
+optional = true
 python-versions = "*"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "wcwidth-0.2.13-py2.py3-none-any.whl", hash = "sha256:3da69048e4540d84af32131829ff948f1e022c1c6bdb8d6102117aac784f6859"},
     {file = "wcwidth-0.2.13.tar.gz", hash = "sha256:72ea0c06399eb286d978fdedb6923a9eb47e1c486ce63e9b4e64fc18303972b5"},
@@ -3735,10 +4236,10 @@ files = [
 name = "webcolors"
 version = "24.11.1"
 description = "A library for working with the color formats defined by HTML and CSS."
-optional = false
+optional = true
 python-versions = ">=3.9"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "webcolors-24.11.1-py3-none-any.whl", hash = "sha256:515291393b4cdf0eb19c155749a096f779f7d909f7cceea072791cb9095b92e9"},
     {file = "webcolors-24.11.1.tar.gz", hash = "sha256:ecb3d768f32202af770477b8b65f318fa4f566c22948673a977b00d589dd80f6"},
@@ -3748,10 +4249,10 @@ files = [
 name = "websocket-client"
 version = "1.8.0"
 description = "WebSocket client for Python with low level API options"
-optional = false
+optional = true
 python-versions = ">=3.8"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "websocket_client-1.8.0-py3-none-any.whl", hash = "sha256:17b44cc997f5c498e809b22cdf2d9c7a9e71c02c8cc2b6c56e7c2d1239bfa526"},
     {file = "websocket_client-1.8.0.tar.gz", hash = "sha256:3239df9f44da632f96012472805d40a23281a991027ce11d2f45a6f24ac4c3da"},
@@ -3766,10 +4267,10 @@ test = ["websockets"]
 name = "wirerope"
 version = "1.0.0"
 description = "'Turn functions and methods into fully controllable objects'"
-optional = false
+optional = true
 python-versions = "*"
-groups = ["pypi"]
-markers = "python_version <= \"3.11\""
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "wirerope-1.0.0-py2.py3-none-any.whl", hash = "sha256:59346555c7b5dbd1c683a4e123f8bed30ca99df646f6867ea6439ceabf43c2f6"},
     {file = "wirerope-1.0.0.tar.gz", hash = "sha256:7da8bb6feeff9dd939bd7141ef0dc392674e43ba662e20909d6729db81a7c8d0"},
@@ -3782,7 +4283,11 @@ six = ">=1.11.0"
 doc = ["sphinx"]
 test = ["pytest (>=4.6.7)", "pytest-checkdocs (>=1.2.5)", "pytest-checkdocs (>=2.9.0)", "pytest-cov (>=2.6.1)"]
 
+[extras]
+pypi = ["commonroad-clcs", "commonroad-clcs", "commonroad-crime", "commonroad-crime", "commonroad-drivability-checker", "commonroad-drivability-checker", "commonroad-global-planner", "commonroad-global-planner", "commonroad-io", "commonroad-io", "commonroad-labeling", "commonroad-labeling", "commonroad-ots", "commonroad-ots", "commonroad-path-toolkit", "commonroad-path-toolkit", "commonroad-prediction", "commonroad-prediction", "commonroad-raceline-planner", "commonroad-raceline-planner", "commonroad-reach", "commonroad-reactive-planner", "commonroad-reactive-planner", "commonroad-route-planner", "commonroad-route-planner", "commonroad-scenario-factory", "commonroad-scenario-factory", "commonroad-sumo", "commonroad-sumo", "commonroad-vehicle-models", "commonroad-velocity-planner", "commonroad-velocity-planner"]
+repo = ["commonroad-clcs", "commonroad-clcs", "commonroad-crime", "commonroad-crime", "commonroad-drivability-checker", "commonroad-drivability-checker", "commonroad-global-planner", "commonroad-global-planner", "commonroad-io", "commonroad-io", "commonroad-labeling", "commonroad-labeling", "commonroad-ots", "commonroad-ots", "commonroad-path-toolkit", "commonroad-path-toolkit", "commonroad-prediction", "commonroad-prediction", "commonroad-raceline-planner", "commonroad-raceline-planner", "commonroad-reach", "commonroad-reactive-planner", "commonroad-reactive-planner", "commonroad-route-planner", "commonroad-route-planner", "commonroad-scenario-designer", "commonroad-scenario-factory", "commonroad-scenario-factory", "commonroad-sumo", "commonroad-sumo", "commonroad-vehicle-models", "commonroad-velocity-planner", "commonroad-velocity-planner"]
+
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.10, <3.12"
-content-hash = "2c1809e1c6d5dfa5a53e07f6bbc1554101814041d5de058d2423162b566fe0a3"
+content-hash = "c3b8fb625e820f10b096ebab69dbce40938391ae6e27bebb4620724adce1e564"

@@ -21,12 +21,11 @@ install_all:
   stage: test_install
   parallel :
     matrix :
-      - PACKAGE_VERSIONS : [ "pypi", "dev" ]
-      - PACKAGE_VERSIONS_REV : [ "dev", "pypi" ]
-        PYTHON_VERSIONS : [ "3.10", "3.11" ]  # TODO extend to 3.12 and 3.13
+      - PYTHON_VERSIONS : [ "3.10", "3.11" ]  # TODO extend to 3.12 and 3.13
+        PACKAGE_VERSIONS : [ "pypi", "repo" ]
   script:
-    - echo "Installing commonroad-io with Python ${PYTHON_VERSIONS} and package versions ${PACKAGE_VERSIONS} and without ${PACKAGE_VERSIONS_REV}"
-    - apt-get update && apt-get install -y git  # libomp-dev libboost-all-dev libeigen3-dev libyaml-cpp-dev pybind11-dev doctest-dev doxygen
+    - echo "Installing commonroad-io with Python ${PYTHON_VERSIONS} and package versions ${PACKAGE_VERSIONS}."
+    - apt-get update && apt-get install -y git
     - pip install poetry
     - poetry config virtualenvs.in-project true
     - git config --global url."https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.lrz.de".insteadOf "ssh://git@gitlab.lrz.de"
@@ -35,7 +34,7 @@ install_all:
     # note: access to the dev version of other commonroad repos must be granted for this CI
     # to this end, go to https://gitlab.lrz.de/cps/commonroad/commonroad-io (or other repos) → Settings → CI/CD → Job token permissions
     # add your repo to the CI/CD job token allowlist
-    - poetry install --with ${PACKAGE_VERSIONS} --without ${PACKAGE_VERSIONS_REV}
+    - poetry install --extras ${PACKAGE_VERSIONS}
     - source .venv/bin/activate
 
 publish_internal:
@@ -58,7 +57,7 @@ push_to_external_pipy_test_registry:
     - master
   script:
     - poetry config repositories.test https://test.pypi.org/legacy/
-    - poetry install --with pypi
+    - poetry install --extras pypi
     - poetry build
     - poetry publish --repository test -u __token__ -p ${CR_PYPI_TEST_API_TOKEN}
 
@@ -68,6 +67,6 @@ push_to_external_pipy_release_registry:
   only:
     - master
   script:
-    - poetry install --with pypi
+    - poetry install --extras pypi
     - poetry build
     - poetry publish -u __token__ -p ${CR_PYPI_RELEASE_API_TOKEN}

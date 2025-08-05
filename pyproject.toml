@@ -30,8 +30,8 @@ commonroad-ots = "^2025.1"
 commonroad-sumo = "^2025.1"
 commonroad-labeling = "^2025.1.1"
 commonroad-crime = "^0.4.4"
-commonroad-drivability-checker = "^2025.3.1"
-commonroad-reach = "^2025.2.0"
+# commonroad-drivability-checker = "^2025.3.1"
+# commonroad-reach = "^2025.2.0"
 commonroad-clcs = "^2025.2.0"
 commonroad-global-planner = "^0.0.1"
 commonroad-velocity-planner = "^1.0.0"
@@ -58,7 +58,7 @@ commonroad-ots = { git = "git@gitlab.lrz.de:cps/commonroad/cr-ots-interface.git"
 commonroad-sumo = { git = "git@gitlab.lrz.de:cps/sumo-interface.git", branch = "develop" }
 commonroad-labeling = { git = "git@gitlab.lrz.de:cps/commonroad/automatic-scenario-labeling.git", branch = "develop" }
 commonroad-crime = { git = "git@gitlab.lrz.de:cps/commonroad/commonroad-criticality-measures.git", branch = "develop" }
-commonroad-drivability-checker = { git = "git@gitlab.lrz.de:cps/commonroad-drivability-checker.git", branch = "development"}
+# commonroad-drivability-checker = { git = "git@gitlab.lrz.de:cps/commonroad-drivability-checker.git", branch = "development"}
 # commonroad-reach = { git = "git@gitlab.lrz.de:cps/commonroad/commonroad-reachable-set.git", branch = "develop" }  # TODO fix build backend
 commonroad-clcs = { git = "git@gitlab.lrz.de:cps/commonroad/commonroad-clcs.git", branch = "main"}
 commonroad-global-planner = { git = "git@gitlab.lrz.de:cps/commonroad/commonroad-global-planner.git", branch = "develop" }

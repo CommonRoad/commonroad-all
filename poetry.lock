@@ -3924,4 +3924,4 @@ test = ["pytest (>=4.6.7)", "pytest-checkdocs (>=1.2.5)", "pytest-checkdocs (>=2
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.10, <3.12"
-content-hash = "d17a994247953229582906a015b7bb6c0af17c9eb415cfc9247027e2b5f074b3"
+content-hash = "6d664fe347a2f6845e9dd386d90696f3a8c0ded1e2935ea61a2aca072edc7e6d"

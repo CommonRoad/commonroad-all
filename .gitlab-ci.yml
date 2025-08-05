@@ -24,7 +24,7 @@ install_all:
       - PYTHON_VERSIONS : [ "3.10", "3.11" ]  # TODO extend to 3.12 and 3.13
         PACKAGE_VERSIONS : [ "pypi", "dev" ]
   script:
-    - apt-get update && apt-get install -y git
+    - apt-get update && apt-get install -y git libomp-dev libboost-all-dev libeigen3-dev libyaml-cpp-dev pybind11-dev doctest-dev doxygen
     - pip install poetry
     - poetry config virtualenvs.in-project true
     - git config --global url."https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.lrz.de".insteadOf "ssh://git@gitlab.lrz.de"

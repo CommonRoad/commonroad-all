@@ -21,10 +21,11 @@ install_all:
   stage: test_install
   parallel :
     matrix :
-      - PYTHON_VERSIONS : [ "3.10", "3.11", "3.12", "3.13" ]
+      - PYTHON_VERSIONS : [ "3.10", "3.11" ]  # TODO extend to 3.12 and 3.13
+      - PACKAGE_VERSIONS : [ "pypi", "dev" ]
   script:
     - apt-get update && apt-get install -y git
-    - pip install poetry
+    - pip install poetry --with ${PACKAGE_VERSIONS}
     - poetry config virtualenvs.in-project true
     - git config --global url."https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.lrz.de".insteadOf "ssh://git@gitlab.lrz.de"
     # if job is triggered by a schedule, run poetry update to update dependencies

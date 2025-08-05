@@ -20,6 +20,20 @@ packages = [{include = "commonroad_all"}]
 
 [tool.poetry.dependencies]
 python = ">=3.10, <3.12"
+
+[tool.poetry.group.pypi]
+optional = true
+
+[tool.poetry.group.pypi.dependencies]
+commonroad-io = "^2024.3"
+commonroad-route-planner = "^2025.1.0"
+commonroad-scenario-designer = "^0.8.4"
+commonroad-scenario-factory = "^2.0.0"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
 commonroad-io = { git = "git@gitlab.lrz.de:cps/commonroad/commonroad-io.git", branch = "develop"}
 commonroad-route-planner = { git = "git@gitlab.lrz.de:cps/commonroad-route-planner.git", branch = "develop" }
 commonroad-scenario-designer = { git = "git@gitlab.lrz.de:cps/commonroad/commonroad-scenario-designer.git", branch = "develop" }

@@ -26,6 +26,12 @@ install_all:
     - apt-get update && apt-get install -y git
     - pip install poetry
     - poetry config virtualenvs.in-project true
+    - git config --global url."https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.lrz.de".insteadOf "ssh://git@gitlab.lrz.de"
+    # if job is triggered by a schedule, run poetry update to update dependencies
+    - if [ "$CI_PIPELINE_SOURCE" == "schedule" ]; then poetry update; fi
+    # note: access to the dev version of commonroad-io must be granted for your repo / CI
+    # to this end, go to https://gitlab.lrz.de/cps/commonroad/commonroad-io → Settings → CI/CD → Job token permissions
+    # add your repo to the CI/CD job token allowlist
     - poetry install
     - source .venv/bin/activate
 

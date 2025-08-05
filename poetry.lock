@@ -753,10 +753,10 @@ resolved_reference = "33e51dcfe7786532f01ac3b940c3525af0ce1be4"
 name = "commonroad-path-toolkit"
 version = "0.0.1"
 description = "Useful functions for working with paths"
-optional = true
+optional = false
 python-versions = "<3.13,>=3.8"
 groups = ["main"]
-markers = "python_version <= \"3.11\" and extra == \"pypi\""
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
 files = [
     {file = "commonroad_path_toolkit-0.0.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:70ad0c571b7160bd9da00a311f11e234cafc6f4d18b4ebd5dafeda4035b4f52d"},
     {file = "commonroad_path_toolkit-0.0.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:311412ef426331512db22fa8e9afe742e29ee07eadbf81f15511fd696e9ad1e7"},
@@ -764,23 +764,6 @@ files = [
     {file = "commonroad_path_toolkit-0.0.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:51e03394f87fbc30562cd5c83e89a4f6cdbf2666b8d57973c4b82231dd0d79ac"},
     {file = "commonroad_path_toolkit-0.0.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:b098177f2eaaf9a8e8e68d33f2b78a70dc6a6a9d0c59acdf90a049d51009d431"},
 ]
-
-[[package]]
-name = "commonroad-path-toolkit"
-version = "0.0.1"
-description = "Useful functions for working with paths"
-optional = true
-python-versions = ">=3.8, <3.13"
-groups = ["main"]
-markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
-files = []
-develop = false
-
-[package.source]
-type = "git"
-url = "ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-path-toolkit.git"
-reference = "HEAD"
-resolved_reference = "d6e01f252ab12407a2b7036282752a56c07ada23"
 
 [[package]]
 name = "commonroad-prediction"
@@ -4284,10 +4267,10 @@ doc = ["sphinx"]
 test = ["pytest (>=4.6.7)", "pytest-checkdocs (>=1.2.5)", "pytest-checkdocs (>=2.9.0)", "pytest-cov (>=2.6.1)"]
 
 [extras]
-pypi = ["commonroad-clcs", "commonroad-clcs", "commonroad-crime", "commonroad-crime", "commonroad-drivability-checker", "commonroad-drivability-checker", "commonroad-global-planner", "commonroad-global-planner", "commonroad-io", "commonroad-io", "commonroad-labeling", "commonroad-labeling", "commonroad-ots", "commonroad-ots", "commonroad-path-toolkit", "commonroad-path-toolkit", "commonroad-prediction", "commonroad-prediction", "commonroad-raceline-planner", "commonroad-raceline-planner", "commonroad-reach", "commonroad-reactive-planner", "commonroad-reactive-planner", "commonroad-route-planner", "commonroad-route-planner", "commonroad-scenario-factory", "commonroad-scenario-factory", "commonroad-sumo", "commonroad-sumo", "commonroad-vehicle-models", "commonroad-velocity-planner", "commonroad-velocity-planner"]
-repo = ["commonroad-clcs", "commonroad-clcs", "commonroad-crime", "commonroad-crime", "commonroad-drivability-checker", "commonroad-drivability-checker", "commonroad-global-planner", "commonroad-global-planner", "commonroad-io", "commonroad-io", "commonroad-labeling", "commonroad-labeling", "commonroad-ots", "commonroad-ots", "commonroad-path-toolkit", "commonroad-path-toolkit", "commonroad-prediction", "commonroad-prediction", "commonroad-raceline-planner", "commonroad-raceline-planner", "commonroad-reach", "commonroad-reactive-planner", "commonroad-reactive-planner", "commonroad-route-planner", "commonroad-route-planner", "commonroad-scenario-designer", "commonroad-scenario-factory", "commonroad-scenario-factory", "commonroad-sumo", "commonroad-sumo", "commonroad-vehicle-models", "commonroad-velocity-planner", "commonroad-velocity-planner"]
+pypi = ["commonroad-clcs", "commonroad-clcs", "commonroad-crime", "commonroad-crime", "commonroad-drivability-checker", "commonroad-drivability-checker", "commonroad-global-planner", "commonroad-global-planner", "commonroad-io", "commonroad-io", "commonroad-labeling", "commonroad-labeling", "commonroad-ots", "commonroad-ots", "commonroad-path-toolkit", "commonroad-prediction", "commonroad-prediction", "commonroad-raceline-planner", "commonroad-raceline-planner", "commonroad-reach", "commonroad-reactive-planner", "commonroad-reactive-planner", "commonroad-route-planner", "commonroad-route-planner", "commonroad-scenario-factory", "commonroad-scenario-factory", "commonroad-sumo", "commonroad-sumo", "commonroad-vehicle-models", "commonroad-velocity-planner", "commonroad-velocity-planner"]
+repo = ["commonroad-clcs", "commonroad-clcs", "commonroad-crime", "commonroad-crime", "commonroad-drivability-checker", "commonroad-drivability-checker", "commonroad-global-planner", "commonroad-global-planner", "commonroad-io", "commonroad-io", "commonroad-labeling", "commonroad-labeling", "commonroad-ots", "commonroad-ots", "commonroad-path-toolkit", "commonroad-prediction", "commonroad-prediction", "commonroad-raceline-planner", "commonroad-raceline-planner", "commonroad-reach", "commonroad-reactive-planner", "commonroad-reactive-planner", "commonroad-route-planner", "commonroad-route-planner", "commonroad-scenario-designer", "commonroad-scenario-factory", "commonroad-scenario-factory", "commonroad-sumo", "commonroad-sumo", "commonroad-vehicle-models", "commonroad-velocity-planner", "commonroad-velocity-planner"]
 
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.10, <3.12"
-content-hash = "c3b8fb625e820f10b096ebab69dbce40938391ae6e27bebb4620724adce1e564"
+content-hash = "9936a5a600e7baf777a3e93f0a5b78b05fea7f3680ef3bb3c3e8626b6ee77699"

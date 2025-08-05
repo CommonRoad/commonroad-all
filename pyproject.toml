@@ -48,7 +48,6 @@ commonroad-drivability-checker = [
     { markers = "extra == 'pypi'", version = "^2025.3.1" },
     { markers = "extra == 'repo'", git = "git@gitlab.lrz.de:cps/commonroad-drivability-checker.git" }
 ]
-commonroad-reach = "^2025.2.0"
 commonroad-clcs = [
     { markers = "extra == 'pypi'", version = "^2025.2.0" },
     { markers = "extra == 'repo'", git = "git@gitlab.lrz.de:cps/commonroad/commonroad-clcs.git" }
@@ -69,26 +68,43 @@ commonroad-raceline-planner = [
     { markers = "extra == 'pypi'", version = "^0.1.1" },
     { markers = "extra == 'repo'", git = "git@gitlab.lrz.de:cps/commonroad/commonroad-raceline-planner.git" }
 ]
-commonroad-path-toolkit = [
-    { markers = "extra == 'pypi'", version = "^0.0.1" },
-    { markers = "extra == 'repo'", git = "git@gitlab.lrz.de:cps/commonroad/commonroad-path-toolkit.git" }
-]
 commonroad-prediction = [
     { markers = "extra == 'pypi'", version = "^0.1.1" },
     { markers = "extra == 'repo'", git = "git@gitlab.lrz.de:cps/commonroad/commonroad-prediction.git" }
 ]
+# TODO fix all below packages
 commonroad-scenario-designer = { git = "git@gitlab.lrz.de:cps/commonroad/commonroad-scenario-designer.git", optional = true}
-commonroad-vehicle-models = "^3.0.2"  # TODO relax commonroad-crime to run development version
-# commonroad-scenario-designer = "^0.8.4"  # TODO update commonroad-drivability-checker version
-# commonroad-carla-interface = "^1.0.0"  # TODO python version must be updated
-# commonroad-dataset-converter = "^2023.2"  # TODO python verion must be updated
+#[
+#    { markers = "extra == 'pypi'", version = "^0.8.4" }, # TODO update commonroad-drivability-checker version
+#    { markers = "extra == 'repo'", git = "git@gitlab.lrz.de:cps/commonroad/commonroad-scenario-designer.git" }
+#]
+commonroad-vehicle-models = "^3.0.2"
+#[
+#    { markers = "extra == 'pypi'", version = "^3.0.2" },
+#    { markers = "extra == 'repo'", git = "git@gitlab.lrz.de:cps/commonroad-vehicle-models.git" }  # TODO relax commonroad-crime to run development version
+#]
+commonroad-reach = "^2025.2.0"
+#[
+#    { markers = "extra == 'pypi'", version = "^2025.2.0" },
+#    { markers = "extra == 'repo'", git = "git@gitlab.lrz.de:cps/commonroad/commonroad-reachable-set.git" }  # TODO fix CI build backend
+#]
+commonroad-path-toolkit = "^0.0.1"
+#[
+#    { markers = "extra == 'pypi'", version = "^0.0.1" },
+#    { markers = "extra == 'repo'", git = "git@gitlab.lrz.de:cps/commonroad/commonroad-path-toolkit.git" }  # TODO fix CI build backend
+#]
+#commonroad-carla-interface = [
+#    { markers = "extra == 'pypi'", version = "^1.0.0" },  # TODO python version must be updated
+#    { markers = "extra == 'repo'", git = "git@gitlab.lrz.de:cps/commonroad/commonroad-carla-interface.git" }  # TODO python version must be updated
+#]
+#commonroad-dataset-converter = [
+#    { markers = "extra == 'pypi'", version = "^2023.2" },  # TODO python verion must be updated
+#    { markers = "extra == 'repo'", git = "git@gitlab.lrz.de:cps/commonroad/commonroad-dataset-converter.git" }  # TODO commonroad-drivability-checker version must be updated
+#]
 # commonroad-openscenario-converter = "0.1.0"  # TODO commonroad-io version must be updated
 # commonroad-rl = "2023.1.3"  # TODO commonroad-route-planner version must be updated
 # commonroad-geometric = "0.1.2"  # TODO python version must be updated
-# commonroad-vehicle-models = { git = "git@gitlab.lrz.de:cps/commonroad-vehicle-models.git", branch = "master"}  # TODO relax commonroad-crime
-# commonroad-reach = { git = "git@gitlab.lrz.de:cps/commonroad/commonroad-reachable-set.git", branch = "develop" }  # TODO fix build backend
-# commonroad-carla-interface = { git = "git@gitlab.lrz.de:cps/commonroad/commonroad-carla-interface.git", branch = "develop" }  # TODO update python version
-# commonroad-dataset-converter = { git = "git@gitlab.lrz.de:cps/commonroad/commonroad-dataset-converter.git", branch = "develop" }  # TODO commonroad-drivability-checker version must be updated
+
 
 [tool.poetry.extras]
 pypi = [
@@ -108,7 +124,10 @@ pypi = [
     "commonroad-reactive-planner",
     "commonroad-raceline-planner",
     "commonroad-path-toolkit",
-    "commonroad-prediction"
+    "commonroad-prediction",
+    # "commonroad-scenario-designer",
+    # "commonroad-carla-interface",
+    # "commonroad-dataset-converter"
 ]
 repo = [
     "commonroad-io",
@@ -128,7 +147,9 @@ repo = [
     "commonroad-raceline-planner",
     "commonroad-path-toolkit",
     "commonroad-prediction",
-    "commonroad-scenario-designer"
+    "commonroad-scenario-designer",
+    # "commonroad-carla-interface",
+    # "commonroad-dataset-converter"
 ]
 
 [build-system]

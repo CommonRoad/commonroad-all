@@ -22,7 +22,7 @@ install_all:
   parallel :
     matrix :
       - PYTHON_VERSIONS : [ "3.10", "3.11" ]  # TODO extend to 3.12 and 3.13
-      - PACKAGE_VERSIONS : [ "pypi", "dev" ]
+        PACKAGE_VERSIONS : [ "pypi", "dev" ]
   script:
     - apt-get update && apt-get install -y git
     - pip install poetry --with ${PACKAGE_VERSIONS}

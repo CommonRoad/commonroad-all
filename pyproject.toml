@@ -34,7 +34,7 @@ commonroad-ots = [
 ]
 commonroad-sumo = [
     { markers = "extra == 'pypi'", version = "^2025.1" },
-    { markers = "extra == 'repo'", git = "git@gitlab.lrz.de:cps/sumo-interface.git" }
+    { markers = "extra == 'repo'", git = "git@gitlab.lrz.de:cps/commonroad/sumo-interface.git" }
 ]
 commonroad-labeling = [
     { markers = "extra == 'pypi'", version = "^2025.1.1" },

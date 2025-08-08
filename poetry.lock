@@ -1096,6 +1096,38 @@ test = ["coverage[toml] (>=7.5,<8.0.0)", "parameterized (>=0.8.1,<1.0.0)", "pyte
 
 [package.source]
 type = "git"
+url = "ssh://git@gitlab.lrz.de/cps/commonroad/sumo-interface.git"
+reference = "HEAD"
+resolved_reference = "b91dde58798442be613b7be84c91db01ce569b0f"
+
+[[package]]
+name = "commonroad-sumo"
+version = "2025.1.1"
+description = "Interface between CommonRoad and the SUMO traffic simulator"
+optional = true
+python-versions = ">=3.10,<4.0"
+groups = ["main"]
+markers = "(extra == \"pypi\" or extra == \"repo\") and python_version <= \"3.11\""
+files = []
+develop = false
+
+[package.dependencies]
+commonroad-io = ">=2024.3,<2025.0"
+ffmpeg = ">=1.4,<2.0.0"
+libsumo = ">=1.19.0,<2.0.0"
+matplotlib = ">=3.0.0,<4.0.0"
+numpy = {version = ">=1.26.1,<2.0.0", markers = "python_version < \"3.13\""}
+shapely = ">=2.0.0,<3.0.0"
+traci = ">=1.19.0,<2.0.0"
+typing-extensions = ">=4.12.2,<5.0.0"
+
+[package.extras]
+dev = ["pre-commit (>=3.5.0,<4.0.0)"]
+docs = ["mkdocs (>=1.6.0,<2.0.0)", "mkdocs-autorefs (>=1.0.1,<2.0.0)", "mkdocs-material (>=9.6.14,<10.0.0)", "mkdocstrings-python (>=1.10.3,<2.0.0)"]
+test = ["coverage[toml] (>=7.5,<8.0.0)", "parameterized (>=0.8.1,<1.0.0)", "pytest (>=7.4,<8.0.0)", "pytest-mock (>=3.12.0,<4.0.0)"]
+
+[package.source]
+type = "git"
 url = "ssh://git@gitlab.lrz.de/cps/sumo-interface.git"
 reference = "HEAD"
 resolved_reference = "b91dde58798442be613b7be84c91db01ce569b0f"
@@ -4217,4 +4249,4 @@ repo = ["commonroad-clcs", "commonroad-clcs", "commonroad-crime", "commonroad-cr
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.10, <3.12"
-content-hash = "dac998327c07194c012991810310c542a38b9775dd2f0beb4070e63e7ca99d37"
+content-hash = "ef78b82411afe5b422e9eb3c359ce3bac4cecbc109b52917193fe38a9f861b81"

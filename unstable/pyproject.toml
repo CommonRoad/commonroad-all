@@ -35,7 +35,7 @@ dependencies = [
     "commonroad-reach @ git+ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-reachable-set",
     "commonroad-scenario-designer @ git+ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-scenario-designer",
     # packages only available in unstable
-    "commonroad_cpp @ git+ssh://git@gitlab.lrz.de/cps/commonroad/environment-model",
+    "commonroad_cpp @ git+ssh://git@gitlab.lrz.de/cps/commonroad/environment-model@develop",
     "commonroad_monitor @ git+ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-monitor",
     "cr_reach_flow @ git+ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-reach-flow@development",
     # TODO fix all below packages

@@ -58,7 +58,7 @@ install_unstable:
       - PYTHON_VERSION: *python-versions
   script:
     # TODO fix build backend (for path toolkit), i.e., install required system dependencies
-    - apt-get update && apt-get install -y openjdk-17-jre-headless
+    - apt-get update && apt-get install -y openjdk-25-jre-headless
     - cd unstable
     - *test-install
   needs: [ ]

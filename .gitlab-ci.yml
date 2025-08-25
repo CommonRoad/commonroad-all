@@ -30,7 +30,6 @@ linting:
     - pre-commit run --all-files --show-diff-on-failure
 
 .test-install: &test-install
-  # TODO fix build backend (for path toolkit), i.e., install required system dependencies
   - poetry config virtualenvs.in-project true
   - *update-git-config
   # if job is triggered by a schedule, run poetry update to update dependencies
@@ -58,6 +57,8 @@ install_unstable:
     matrix:
       - PYTHON_VERSION: *python-versions
   script:
+    # TODO fix build backend (for path toolkit), i.e., install required system dependencies
+    - apt-get update && apt-get install -y openjdk-25-jre-headless
     - cd unstable
     - *test-install
   needs: [ ]

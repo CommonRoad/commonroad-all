@@ -1,13 +1,26 @@
 stages:
   - linting
   - test_install
+  - build-wheels
   - deploy
+
+.update-git-config: &update-git-config
+  - git config --global url."https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.lrz.de/".insteadOf "git@gitlab.lrz.de:"
+  - git config --global url."https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.lrz.de".insteadOf "ssh://git@gitlab.lrz.de"
 
 default:
   image: python:3.10
   before_script:
     - apt-get update && apt-get install -y git
+    - *update-git-config
     - pip install poetry
+
+.python-versions: &python-versions
+  - "3.10"
+  - "3.11"
+# TODO extend to 3.12 and 3.13
+#  - "3.12"
+#  - "3.13"
 
 linting:
   stage: linting
@@ -16,26 +29,48 @@ linting:
   script:
     - pre-commit run --all-files --show-diff-on-failure
 
-install_all:
-  image : python:$PYTHON_VERSIONS
+.test-install: &test-install
+  # TODO fix build backend (for path toolkit), i.e., install required system dependencies
+  - poetry config virtualenvs.in-project true
+  - *update-git-config
+  # if job is triggered by a schedule, run poetry update to update dependencies
+  - if [ "$CI_PIPELINE_SOURCE" == "schedule" ]; then poetry update; fi
+  # note: access to the dev version of other commonroad repos must be granted for this CI
+  # to this end, go to https://gitlab.lrz.de/cps/commonroad/commonroad-io (or other repos) → Settings → CI/CD → Job token permissions
+  # add your repo to the CI/CD job token allowlist
+  - poetry install
+  - source .venv/bin/activate
+
+install_stable:
+  image: python:$PYTHON_VERSION
   stage: test_install
-  parallel :
-    matrix :
-      - PYTHON_VERSIONS : [ "3.10", "3.11" ]  # TODO extend to 3.12 and 3.13
-        PACKAGE_VERSIONS : [ "pypi", "repo" ]
+  parallel:
+    matrix:
+      - PYTHON_VERSION: *python-versions
   script:
-    - echo "Installing commonroad-io with Python ${PYTHON_VERSIONS} and package versions ${PACKAGE_VERSIONS}."
-    - apt-get update && apt-get install -y git  # libopenblas-dev libomp-dev libboost-all-dev libeigen3-dev libyaml-cpp-dev pybind11-dev doctest-dev doxygen  # TODO fix build backend (for reach and path toolkit)
-    - pip install poetry
+    - *test-install
+  needs: [ ]
+
+install_unstable:
+  image: python:$PYTHON_VERSION
+  stage: test_install
+  parallel:
+    matrix:
+      - PYTHON_VERSION: *python-versions
+  script:
+    - cd unstable
+    - *test-install
+  needs: [ ]
+
+build_wheels:
+  stage: build-wheels
+  script:
     - poetry config virtualenvs.in-project true
-    - git config --global url."https://gitlab-ci-token:${CI_JOB_TOKEN}@gitlab.lrz.de".insteadOf "ssh://git@gitlab.lrz.de"
-    # if job is triggered by a schedule, run poetry update to update dependencies
-    - if [ "$CI_PIPELINE_SOURCE" == "schedule" ]; then poetry update; fi
-    # note: access to the dev version of other commonroad repos must be granted for this CI
-    # to this end, go to https://gitlab.lrz.de/cps/commonroad/commonroad-io (or other repos) → Settings → CI/CD → Job token permissions
-    # add your repo to the CI/CD job token allowlist
-    - poetry install --extras ${PACKAGE_VERSIONS}
-    - source .venv/bin/activate
+    - poetry build
+  artifacts:
+    paths:
+      - dist/*
+  needs: [ ]
 
 publish_internal:
   stage: deploy
@@ -44,11 +79,13 @@ publish_internal:
     - master
   script:
     - poetry config repositories.gitlab ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/pypi
-    - poetry build
     - poetry publish --repository gitlab -u gitlab-ci-token -p ${CI_JOB_TOKEN}
   environment:
     name: staging
     url: ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/pypi
+  needs:
+    - job: build_wheels
+      artifacts: true
 
 push_to_external_pipy_test_registry:
   stage: deploy
@@ -57,9 +94,10 @@ push_to_external_pipy_test_registry:
     - master
   script:
     - poetry config repositories.test https://test.pypi.org/legacy/
-    - poetry install --extras pypi
-    - poetry build
     - poetry publish --repository test -u __token__ -p ${CR_PYPI_TEST_API_TOKEN}
+  needs:
+    - job: build_wheels
+      artifacts: true
 
 push_to_external_pipy_release_registry:
   stage: deploy
@@ -67,6 +105,7 @@ push_to_external_pipy_release_registry:
   only:
     - master
   script:
-    - poetry install --extras pypi
-    - poetry build
     - poetry publish -u __token__ -p ${CR_PYPI_RELEASE_API_TOKEN}
+  needs:
+    - job: build_wheels
+      artifacts: true

@@ -326,15 +326,10 @@ name = "commonroad-clcs"
 version = "2025.2.0"
 description = "Curvilinear (Frenet) Coordinate System for motion planning."
 optional = false
-python-versions = "<3.14,>=3.10"
+python-versions = ">=3.10,<3.14"
 groups = ["main"]
-files = [
-    {file = "commonroad_clcs-2025.2.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:f791cf9c70fe681cc177e80420298a3999d3a6ec6588f787c1f6c4a23e2f545e"},
-    {file = "commonroad_clcs-2025.2.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:74462bbd55519950c3f22b43511740eeb94b82bab9480b8e6f4065a290d207a5"},
-    {file = "commonroad_clcs-2025.2.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:de4b876ba4941afbcc709312581929e19674f4dc071041d247d74baf06b0eba9"},
-    {file = "commonroad_clcs-2025.2.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:b4bdae23f3230cda55829ef9edf0b52f44f72f7c8dd2fba4cc1f948b6162a7ff"},
-    {file = "commonroad_clcs-2025.2.0.tar.gz", hash = "sha256:f62d05fea6a2558a8f7fde2e717ef4ec8326ae34485fc7a2e5cdb63876559779"},
-]
+files = []
+develop = false
 
 [package.dependencies]
 commonroad-io = ">=2023.1"
@@ -350,6 +345,12 @@ build = ["cmake (>=3.24,<4.0)", "nanobind (>=2.2.0,<2.3.0)", "pathspec (>=0.12.1
 docs = ["mkdocs (>=1.6.1,<2.0.0)", "mkdocs-material (>=9.5.10,<10.0.0)", "mkdocstrings-python (>=1.8.0,<2.0.0)", "mkdoxy (>=1.2.4,<1.3.0)"]
 test = ["parameterized (>=0.9.0,<0.10.0)", "pytest (>=3.8.0)"]
 
+[package.source]
+type = "git"
+url = "ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-clcs.git"
+reference = "HEAD"
+resolved_reference = "34040496aa71a6244c99ce3236d3c395731b940b"
+
 [[package]]
 name = "commonroad-crime"
 version = "0.4.4"
@@ -357,10 +358,8 @@ description = "criticality measures of automated vehicles"
 optional = false
 python-versions = "*"
 groups = ["main"]
-files = [
-    {file = "commonroad_crime-0.4.4-py3-none-any.whl", hash = "sha256:5fd858eaf77d731c73b1e4edb6c9a3d4adc73ddeb96bc8a1125d329eb744f57f"},
-    {file = "commonroad_crime-0.4.4.tar.gz", hash = "sha256:1252e7c32053b6250b6b4311ac0c3e71e563be0d5af50a63e173dc21fde7d201"},
-]
+files = []
+develop = false
 
 [package.dependencies]
 casadi = ">=3.6.3"
@@ -379,20 +378,21 @@ scipy = ">=1.7.3"
 shapely = ">=2.0.1,<3.0.0"
 tqdm = ">=4.65.0"
 
+[package.source]
+type = "git"
+url = "ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-criticality-measures.git"
+reference = "HEAD"
+resolved_reference = "69e5fb02495a337bff4d3edb80bfd0642e93811a"
+
 [[package]]
 name = "commonroad-drivability-checker"
 version = "2025.3.1"
 description = "Drivability checker for CommonRoad scenarios."
 optional = false
-python-versions = "<3.14,>=3.10"
+python-versions = ">=3.10,<3.14"
 groups = ["main"]
-files = [
-    {file = "commonroad_drivability_checker-2025.3.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:4dce1aa51d0fe866eb3752926757e814278c277a00f571877ea2f971c8bf9207"},
-    {file = "commonroad_drivability_checker-2025.3.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:3a3b482356eb2f47f569ffad635e629dbd8058e7a459c777d7a9ebddda48c258"},
-    {file = "commonroad_drivability_checker-2025.3.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:9ef4ed7cab2d1f2ee624bbc736685ac90a1c109ab29606e1d46fd4d04e3b787c"},
-    {file = "commonroad_drivability_checker-2025.3.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:e9a7cbdbbdbebec1ae19877423a3e4f8d3c4428b74f6e1d4fea7533265afb1ba"},
-    {file = "commonroad_drivability_checker-2025.3.1.tar.gz", hash = "sha256:53aa3c8132be81f689d6702fd1ea313f91373ae308b4e7490488e78569c93ac5"},
-]
+files = []
+develop = false
 
 [package.dependencies]
 commonroad-io = ">=2023.1,<2025.0"
@@ -410,35 +410,43 @@ docs = ["breathe (>=4.18.0)", "cmake (>=3.24,<4.0)", "ipython (>=8.36.0)", "nbsp
 test = ["pytest (>=5.3.2)"]
 triangle = ["triangle (>=20250106)"]
 
+[package.source]
+type = "git"
+url = "ssh://git@gitlab.lrz.de/cps/commonroad-drivability-checker.git"
+reference = "HEAD"
+resolved_reference = "7e4c4530de34130e90fddce985be5c9904f7f911"
+
 [[package]]
 name = "commonroad-global-planner"
 version = "0.0.1"
 description = "CommonRoad Global Planner Toolbox"
 optional = false
-python-versions = "<3.12,>=3.9"
+python-versions = ">=3.9,<3.12"
 groups = ["main"]
-files = [
-    {file = "commonroad_global_planner-0.0.1-py3-none-any.whl", hash = "sha256:a77c18bbf38a707d1dcc4a0703a4dbba52a1830295c0f203bb1f4eff11046469"},
-    {file = "commonroad_global_planner-0.0.1.tar.gz", hash = "sha256:f6d9889bd845eec30a445a1910f9999de3546ca2a76a0719ccac036d9f3755a6"},
-]
+files = []
+develop = false
 
 [package.dependencies]
-commonroad-io = ">=2022.2,<2025.0.1"
-commonroad-route-planner = ">=2025.0.1,<2026.0.0"
-commonroad-velocity-planner = ">=1.0.0,<2.0.0"
+commonroad-io = ">=2022.2, <2025.0.1"
+commonroad-route-planner = "^2025.0.1"
+commonroad-velocity-planner = "^1.0.0"
 matplotlib = "<3.9"
+
+[package.source]
+type = "git"
+url = "ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-global-planner.git"
+reference = "HEAD"
+resolved_reference = "ae06c26634e60eb3b0ebd33d39b29c066eb8db9b"
 
 [[package]]
 name = "commonroad-io"
 version = "2024.3"
 description = "Python tool to read, write, and visualize CommonRoad scenarios and solutions for automated vehicles."
 optional = false
-python-versions = "<4.0,>=3.9"
+python-versions = "^3.9"
 groups = ["main"]
-files = [
-    {file = "commonroad_io-2024.3-py3-none-any.whl", hash = "sha256:2994cda71550903ca93834c472ab14bd7f5f8aadbded8576a02055f0e01b1530"},
-    {file = "commonroad_io-2024.3.tar.gz", hash = "sha256:9561464469e83e518675cfc8e1a782eaff535aeda93803cc7facf62237b11ff3"},
-]
+files = []
+develop = false
 
 [package.dependencies]
 commonroad-vehicle-models = ">=2.0.0"
@@ -449,118 +457,156 @@ networkx = ">=2.2"
 numpy = {version = ">=1.26.1", markers = "python_version < \"3.13\""}
 omegaconf = ">=2.0"
 pillow = ">=10.4.0"
-protobuf = "3.20.2"
+protobuf = "==3.20.2"
 rtree = ">=0.8.3"
 scipy = {version = ">=1.11.3", markers = "python_version < \"3.13\""}
-shapely = ">=2.0.1,<3.0.0"
+shapely = "^2.0.1"
 tqdm = ">=4.64"
+
+[package.source]
+type = "git"
+url = "ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-io.git"
+reference = "HEAD"
+resolved_reference = "bdfab5ccc14d1362050d565c88f2a98d6cabdf67"
 
 [[package]]
 name = "commonroad-labeling"
 version = "2025.1.1"
 description = "Automatic labeling of CommonRoad scenarios."
 optional = false
-python-versions = ">=3.10"
+python-versions = ">=3.10,<3.12"
 groups = ["main"]
-files = [
-    {file = "commonroad_labeling-2025.1.1-py3-none-any.whl", hash = "sha256:861bb1a448ffbe43a26dac5ccd46c12c43bcb07aa573a5fc74ecebf7ebc54cae"},
-    {file = "commonroad_labeling-2025.1.1.tar.gz", hash = "sha256:66bf5041d5a4dbf94624b16998da83a1c684045e0b9074eede5c63ec151f0ff6"},
-]
+files = []
+develop = false
 
 [package.dependencies]
-commonroad-clcs = ">=2025.1.1,<2026.0.0"
 commonroad-crime = ">=0.4.4"
-commonroad-drivability-checker = ">=2025.1,<2026.0"
 commonroad-io = ">=2024.3"
+commonroad-reactive-planner = "^2025.1"
 commonroad-route-planner = ">=2025.1.0"
-commonroad_vehicle_models = ">=3.0.2"
-imageio = ">=2.13.5"
-matplotlib = ">=3.5.2,<3.9"
-methodtools = ">=0.4.5,<0.5.0"
-networkx = ">=2.2"
-numpy = ">=1.22"
-omegaconf = ">=2.1.1"
-pandas = ">=2.2.2,<3.0.0"
-scikit-learn = ">=1.4,<2.0"
-scipy = ">=1.5.2"
-triangle = ">=20230923"
+matplotlib = ">=3.5.2, < 3.9"
+pandas = "^2.2.2"
+scikit-learn = "^1.4"
+
+[package.source]
+type = "git"
+url = "ssh://git@gitlab.lrz.de/cps/commonroad/automatic-scenario-labeling.git"
+reference = "HEAD"
+resolved_reference = "3d28e0f8ccdce7a1eec2e8698f403f52467f5cbe"
+
+[[package]]
+name = "commonroad-openscenario-converter"
+version = "0.1.1"
+description = "Converter between OpenSCENARIO and CommonRoad formats"
+optional = false
+python-versions = "*"
+groups = ["main"]
+files = []
+develop = false
+
+[package.dependencies]
+commonroad-io = ">=2024.2"
+commonroad-scenario-designer = ">=0.8.2"
+imageio = ">=2.28.1"
+numpy = ">=1.19.0"
+scenariogeneration = ">=0.9.0"
+tqdm = ">=4.65.0"
+
+[package.extras]
+tests = ["pytest (>=7.1)"]
+
+[package.source]
+type = "git"
+url = "ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-openscenario-converter.git"
+reference = "HEAD"
+resolved_reference = "457a83ea1d10ff231f6a3e3bea475ffe289313fd"
 
 [[package]]
 name = "commonroad-ots"
 version = "2025.1"
 description = "Coupling CommonRoad and OpenTrafficSim."
 optional = false
-python-versions = "<4.0,>=3.10"
+python-versions = "^3.10"
 groups = ["main"]
-files = [
-    {file = "commonroad_ots-2025.1-py3-none-any.whl", hash = "sha256:34a7c10008c9977d204da0569d06f050703872d9faa1a4a971c73d10a87624cd"},
-    {file = "commonroad_ots-2025.1.tar.gz", hash = "sha256:aaa9a85441824471ca1151a828027c1805cdf2f499d183e1acd3a7693faef171"},
-]
+files = []
+develop = false
 
 [package.dependencies]
 commonroad-io = ">=2023.4"
-dtaidistance = ">=2.3.11,<3.0.0"
-JPype1 = ">=1.5.0,<2.0.0"
-matplot2tikz = ">=0.3.3,<0.4.0"
-matplotlib = ">=3.7.0,<4.0.0"
-networkx = ">=3.2.1,<4.0.0"
+dtaidistance = "^2.3.11"
+JPype1 = "^1.5.0"
+matplot2tikz = "^0.4.1"
+matplotlib = "^3.7.0"
+networkx = "^3.2.1"
 numpy = {version = ">=1.26.1", markers = "python_version < \"3.13\""}
 opentrafficsim = "1.7.5"
-pandas = ">=2.2.1,<3.0.0"
-pyperclip = ">=1.8.2,<2.0.0"
-scipy = ">=1.12.0,<2.0.0"
-shapely = ">=2.0.3,<3.0.0"
+pandas = "^2.2.1"
+pyperclip = "^1.8.2"
+scipy = "^1.12.0"
+shapely = "^2.0.3"
+
+[package.source]
+type = "git"
+url = "ssh://git@gitlab.lrz.de/cps/commonroad/cr-ots-interface.git"
+reference = "HEAD"
+resolved_reference = "33e51dcfe7786532f01ac3b940c3525af0ce1be4"
 
 [[package]]
 name = "commonroad-prediction"
 version = "0.1.1"
 description = "A collection and interface for CommonRoad prediction algorithms."
 optional = false
-python-versions = "<3.12,>=3.9"
+python-versions = "^3.9,<3.12"
 groups = ["main"]
-files = [
-    {file = "commonroad_prediction-0.1.1-py3-none-any.whl", hash = "sha256:e65cf19d94c725f206075434ff4241bd6d7e7f3660f75c94713afda8811a4ec4"},
-    {file = "commonroad_prediction-0.1.1.tar.gz", hash = "sha256:39766779be1bfe4ba39ffffdffc78e0818aa2fc3b0bd30fef9565757a4c8943a"},
-]
+files = []
+develop = false
 
 [package.dependencies]
-commonroad-drivability-checker = ">=2024.1"
+commonroad-clcs = ">=2025.1"
+commonroad-drivability-checker = ">=2025.1"
 commonroad-io = ">=2024.1"
-imageio = ">=2.31.1,<3.0.0"
+imageio = "^2.31.1"
 numpy = "<2.0"
+
+[package.source]
+type = "git"
+url = "ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-prediction.git"
+reference = "HEAD"
+resolved_reference = "6d6ba98a9f8db589ad08ee78e17b9f2fe48a1e34"
 
 [[package]]
 name = "commonroad-raceline-planner"
 version = "0.1.1"
 description = "CommonRoad Raceline Planner Toolbox"
 optional = false
-python-versions = "<3.12,>=3.9"
+python-versions = ">=3.9,<3.12"
 groups = ["main"]
-files = [
-    {file = "commonroad_raceline_planner-0.1.1-py3-none-any.whl", hash = "sha256:428732f87a935963206f900d1ee94a88563247242044c97815b448336495b1d9"},
-    {file = "commonroad_raceline_planner-0.1.1.tar.gz", hash = "sha256:9b10edb5079057dc726a66858c1a1bcbb80f66ca80d5418de5a7d5c35d24eb2b"},
-]
+files = []
+develop = false
 
 [package.dependencies]
 casadi = "<4.0.0"
 commonroad-io = ">=2022.2"
-cvxpy = ">=1.4,<2.0"
+cvxpy = "^1.4"
 matplotlib = "<3.9"
 numpy = ">=1.17.4,<2.0"
 quadprog = "<=1.0"
+
+[package.source]
+type = "git"
+url = "ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-raceline-planner.git"
+reference = "HEAD"
+resolved_reference = "7d29eae13a08445a2ca9f59d2d3003560ba1e96b"
 
 [[package]]
 name = "commonroad-reach"
 version = "2025.2.0"
 description = "A Toolbox for Computing Reachable Sets of Automated Vehicles"
 optional = false
-python-versions = "<3.12,>=3.10"
+python-versions = ">=3.10,<3.12"
 groups = ["main"]
-files = [
-    {file = "commonroad_reach-2025.2.0-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:06ee5d6b997319c6baabeff487c466241760f04a44b37c77cbf8ca5668c3cef0"},
-    {file = "commonroad_reach-2025.2.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:5f96632fb0ff99d947c893353a41d86a55a6607a2d32bc57b5505478499d877e"},
-    {file = "commonroad_reach-2025.2.0.tar.gz", hash = "sha256:33b0445b14b64ea921284778b48630a6205882737e15c46081af81a9c76277d2"},
-]
+files = []
+develop = false
 
 [package.dependencies]
 commonroad-clcs = ">=2025.2.0,<2025.3.0"
@@ -583,68 +629,129 @@ build = ["cmake (>=3.24,<4.0)", "nanobind (>=2.2.0,<2.3.0)", "pathspec (>=0.12.1
 docs = ["Sphinx (>=4.5.0)", "docutils (>=0.18.1,<0.21)", "m2r2 (>=0.3.0)", "sphinx-autodoc-typehints (>=1.18.1)", "sphinx-rtd-theme (>=2.0.0)"]
 test = ["pytest (>=3.8.0)"]
 
+[package.source]
+type = "git"
+url = "ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-reachable-set.git"
+reference = "HEAD"
+resolved_reference = "5140770c8a7380a62067eaf3cfaf1fe36eb1da5d"
+
 [[package]]
 name = "commonroad-reactive-planner"
 version = "2025.1"
 description = "CommonRoad Reactive Planner: Sampling-based Frenet Planner"
 optional = false
-python-versions = "<3.12,>=3.9"
+python-versions = ">=3.9,<3.12"
 groups = ["main"]
-files = [
-    {file = "commonroad_reactive_planner-2025.1-py3-none-any.whl", hash = "sha256:aa15b378cf5a089a69aee8df4d29d2b506d486e9c055db980747342724428e83"},
-    {file = "commonroad_reactive_planner-2025.1.tar.gz", hash = "sha256:4995a9b85220a2d4966bea8a4f316dcccc3bc4b4c1cd225b2679cfccdd74e892"},
-]
+files = []
+develop = false
 
 [package.dependencies]
-commonroad-clcs = ">=2025.1.1,<2026.0.0"
-commonroad-drivability-checker = ">=2025.1,<2026.0"
-commonroad-io = ">=2024.3,<2025.0"
-commonroad-route-planner = ">=2025.1.0,<2026.0.0"
+commonroad-clcs = "^2025.1.1"
+commonroad-drivability-checker = "^2025.1"
+commonroad-io = "^2024.3"
+commonroad-route-planner = "^2025.1.0"
 commonroad_vehicle_models = ">=3.0.2"
 imageio = ">=2.13.5"
 matplotlib = ">=2.2.2"
-methodtools = ">=0.4.5,<0.5.0"
+methodtools = "^0.4.5"
 networkx = ">=2.2"
 numpy = ">=1.22"
 omegaconf = ">=2.1.1"
 scipy = ">=1.5.2"
 triangle = ">=20230923"
 
+[package.source]
+type = "git"
+url = "ssh://git@gitlab.lrz.de/cps/reactive-planner.git"
+reference = "HEAD"
+resolved_reference = "6872a915480d89a7353fd8630c4d729b05f40c00"
+
 [[package]]
 name = "commonroad-route-planner"
 version = "2025.1.0"
 description = "Route and reference path planning tool for CommonRoad scenarios"
 optional = false
-python-versions = "<3.12,>=3.9"
+python-versions = ">=3.9,<3.12"
 groups = ["main"]
-files = [
-    {file = "commonroad_route_planner-2025.1.0-py3-none-any.whl", hash = "sha256:88b314882c94b9cf1adb060c3c58b1ef18c42224c4fd5cdc350421527fadf097"},
-    {file = "commonroad_route_planner-2025.1.0.tar.gz", hash = "sha256:677a9eaeebeb9e7595e2bd44adf1c65b5832e8267140fdc09c7a6f18e36d1c5d"},
-]
+files = []
+develop = false
 
 [package.dependencies]
-commonroad-clcs = ">=2025.1.0,<2026.0.0"
+commonroad-clcs = "^2025.1.0"
 commonroad-io = ">=2022.2"
 matplotlib = ">=3.1.2"
 networkx = ">=2.4"
 numpy = ">=1.17.4"
 shapely = ">=1.6.4.post2"
 
+[package.source]
+type = "git"
+url = "ssh://git@gitlab.lrz.de/cps/commonroad-route-planner.git"
+reference = "HEAD"
+resolved_reference = "9aff016d699ee4b4e848dc2a5199264f63acd5aa"
+
+[[package]]
+name = "commonroad-scenario-designer"
+version = "0.8.4"
+description = "Toolbox for Map Conversion and Scenario Creation for Autonomous Vehicles"
+optional = false
+python-versions = "^3.9,<3.12"
+groups = ["main"]
+files = []
+develop = false
+
+[package.dependencies]
+antlr4-python3-runtime = "4.9.3"
+commonroad-clcs = ">=2025.1"
+commonroad-drivability-checker = "^2025.1"
+commonroad-io = ">=2024.2, <=2024.3"
+eclipse-sumo = "^1.19.0"
+iso3166 = "^2.1.1"
+kdtree = "^0.16"
+lxml = "^4.9.2"
+matplotlib = ">=3.6.0"
+mercantile = "^1.2.1"
+mgrs = ">=1.4.5"
+networkx = "^3.0"
+numpy = "^1.26.4,<2.0"
+omegaconf = "^2.3.0"
+ordered-set = "^4.1.0"
+pandas = "^2.0.2"
+pyclothoids = "^0.1.5"
+pygeodesy = "^23.3.23"
+pymetis = ">=2020.1"
+pyproj = "^3.4.1"
+pyqt6 = ">=6.6.0"
+pyyaml = "6.0"
+requests = "^2.31.0 "
+scipy = "^1.11.3"
+shapely = ">=2.0.1"
+similaritymeasures = ">=0.4.4"
+sumocr = "^2024.1"
+typer = "^0.9.0"
+typing-extensions = "^4.8.0"
+urllib3 = "^2.0.3"
+utm = "^0.7.0"
+
+[package.source]
+type = "git"
+url = "ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-scenario-designer.git"
+reference = "HEAD"
+resolved_reference = "fe03685e271bb628a313d9633b11fc527f97469c"
+
 [[package]]
 name = "commonroad-scenario-factory"
 version = "2.0.0"
 description = "Automated scenario generation for CommonRoad based on SUMO traffic simulations."
 optional = false
-python-versions = ">=3.10"
+python-versions = ">=3.10,<3.12"
 groups = ["main"]
-files = [
-    {file = "commonroad_scenario_factory-2.0.0-py3-none-any.whl", hash = "sha256:f2e173b874ffc1b6bfc9dce099b19ba49d4a33181de3b9bcf850f727d79338ff"},
-    {file = "commonroad_scenario_factory-2.0.0.tar.gz", hash = "sha256:e4b91f796de4799b6f972aa480fb78ec1c640890c051b32be94293b70de82261"},
-]
+files = []
+develop = false
 
 [package.dependencies]
 antlr4-python3-runtime = "4.9.3"
-click = ">=8.1,<9.0"
+click = "^8.1"
 commonroad-clcs = ">=2025.1"
 commonroad-crime = ">=0.4.4"
 commonroad-drivability-checker = ">=2025.3.1"
@@ -653,49 +760,53 @@ commonroad-labeling = ">=2025.1.1"
 commonroad-ots = ">=2025.1"
 commonroad-route-planner = ">=2025.1.0"
 commonroad-sumo = ">=2025.1"
-eclipse-sumo = ">=1.19,<2.0"
-iso3166 = ">=2.0,<3.0"
-kdtree = ">=0.16,<0.17"
-libsumo = ">=1.19,<2.0"
-lxml = ">=4.9.2,<5.0.0"
+eclipse-sumo = "^1.19"
+iso3166 = "^2.0"
+kdtree = "^0.16"
+libsumo = "^1.19"
+lxml = "^4.9.2"
 matplotlib = ">=3.6.0"
-mercantile = ">=1.2.1,<2.0.0"
+mercantile = "^1.2.1"
 mgrs = ">=1.4.5"
-multiprocess = ">=0.70,<0.71"
-networkx = ">=3.0,<4.0"
+multiprocess = "^0.70"
+networkx = "^3.0"
 numpy = ">=1.22.4"
-omegaconf = ">=2.3.0,<3.0.0"
-ordered-set = ">=4.1.0,<5.0.0"
+omegaconf = "^2.3.0"
+ordered-set = "^4.1.0"
 osmium = ">=2.16.0"
-pandas = ">=2.0.2,<3.0.0"
-pyclothoids = ">=0.1.5,<0.2.0"
-pygeodesy = ">=23.3.23,<24.0.0"
+pandas = "^2.0.2"
+pyclothoids = "^0.1.5"
+pygeodesy = "^23.3.23"
 pymetis = ">=2020.1"
-pyproj = ">=3.4.1,<4.0.0"
+pyproj = "^3.4.1"
 pyqt6 = ">=6.6.0"
 pyyaml = "6.0"
-requests = ">=2.31.0,<3.0.0"
-scikit-learn = ">=1.3,<2.0"
+requests = "^2.31.0 "
+scikit-learn = "^1.3"
 scipy = ">=1.15.3"
 shapely = ">=2.0.1"
 similaritymeasures = ">=0.4.4"
-sumocr = ">=2024.1,<2025.0"
-typer = ">=0.9.0,<0.10.0"
-typing-extensions = ">=4.12.2,<5.0.0"
-urllib3 = ">=2.0.3,<3.0.0"
-utm = ">=0.7.0,<0.8.0"
+sumocr = "^2024.1"
+typer = "^0.9.0"
+typing-extensions = "^4.12.2"
+urllib3 = "^2.0.3"
+utm = "^0.7.0"
+
+[package.source]
+type = "git"
+url = "ssh://git@gitlab.lrz.de/cps/commonroad/scenario-factory.git"
+reference = "HEAD"
+resolved_reference = "9ffb0b804b94461ffef7dad51de3f52e1376966c"
 
 [[package]]
 name = "commonroad-sumo"
 version = "2025.1.2"
 description = "Interface between CommonRoad and the SUMO traffic simulator"
 optional = false
-python-versions = "<4.0,>=3.10"
+python-versions = ">=3.10,<4.0"
 groups = ["main"]
-files = [
-    {file = "commonroad_sumo-2025.1.2-py3-none-any.whl", hash = "sha256:0e93a3fb738ff192db48916fd0ab799150ac2f8867674eadd3ba8d2ad453363e"},
-    {file = "commonroad_sumo-2025.1.2.tar.gz", hash = "sha256:ec6be44b536e8e50e0bf786a5d5e4dd5dd883e77e12eebcd88cd2f5f6a288512"},
-]
+files = []
+develop = false
 
 [package.dependencies]
 commonroad-io = ">=2024.3,<2025.0"
@@ -711,6 +822,12 @@ typing-extensions = ">=4.12.2,<5.0.0"
 dev = ["pre-commit (>=3.5.0,<4.0.0)"]
 docs = ["mkdocs (>=1.6.0,<2.0.0)", "mkdocs-autorefs (>=1.0.1,<2.0.0)", "mkdocs-material (>=9.6.14,<10.0.0)", "mkdocstrings-python (>=1.10.3,<2.0.0)"]
 test = ["coverage[toml] (>=7.5,<8.0.0)", "parameterized (>=0.8.1,<1.0.0)", "pytest (>=7.4,<8.0.0)", "pytest-mock (>=3.12.0,<4.0.0)"]
+
+[package.source]
+type = "git"
+url = "ssh://git@gitlab.lrz.de/cps/commonroad/sumo-interface.git"
+reference = "HEAD"
+resolved_reference = "cabe0248360f8ece67c994a21c80ace6475465b7"
 
 [[package]]
 name = "commonroad-vehicle-models"
@@ -732,19 +849,23 @@ name = "commonroad-velocity-planner"
 version = "1.0.0"
 description = "CommonRoad Velocity Planner Toolbox"
 optional = false
-python-versions = "<3.12,>=3.9"
+python-versions = ">=3.9,<3.12"
 groups = ["main"]
-files = [
-    {file = "commonroad_velocity_planner-1.0.0-py3-none-any.whl", hash = "sha256:dbb0c79f4d8f88b3701ec832aba929401c58050d229861254b3f4d19a9ebc9f8"},
-    {file = "commonroad_velocity_planner-1.0.0.tar.gz", hash = "sha256:8cde4d541958e002e9340a503c730628e48ee81ab838696212c06ce065b14d43"},
-]
+files = []
+develop = false
 
 [package.dependencies]
 commonroad-io = ">=2022.2"
-commonroad-route-planner = ">=2025.0.1,<2026.0.0"
-cvxpy = ">=1.4,<2.0"
+commonroad-route-planner = "^2025.0.1"
+cvxpy = "^1.4"
 matplotlib = "<3.9"
 numpy = ">=1.17.4,<2.0"
+
+[package.source]
+type = "git"
+url = "ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-velocity-planner.git"
+reference = "HEAD"
+resolved_reference = "a57975cc310badca82c281a692d4371289ae6aa5"
 
 [[package]]
 name = "contourpy"
@@ -1173,6 +1294,21 @@ files = [
     {file = "eclipse_sumo-1.24.0-py2.py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:bcf9fffb52e50661b0ecdce8bcbc9db25baaaf2d3935160be33c41f75abbfb6c"},
     {file = "eclipse_sumo-1.24.0-py2.py3-none-win_amd64.whl", hash = "sha256:8c0e7faf478ae8ccf1a0a1df486de8ceec8d7d5c6b4fbe58ecbd4515b159bd8b"},
 ]
+
+[[package]]
+name = "elementpath"
+version = "4.8.0"
+description = "XPath 1.0/2.0/3.0/3.1 parsers and selectors for ElementTree and lxml"
+optional = false
+python-versions = ">=3.8"
+groups = ["main"]
+files = [
+    {file = "elementpath-4.8.0-py3-none-any.whl", hash = "sha256:5393191f84969bcf8033b05ec4593ef940e58622ea13cefe60ecefbbf09d58d9"},
+    {file = "elementpath-4.8.0.tar.gz", hash = "sha256:5822a2560d99e2633d95f78694c7ff9646adaa187db520da200a8e9479dc46ae"},
+]
+
+[package.extras]
+dev = ["Sphinx", "coverage", "flake8", "lxml", "lxml-stubs", "memory-profiler", "memray", "mypy", "tox", "xmlschema (>=3.3.2)"]
 
 [[package]]
 name = "exceptiongroup"
@@ -1821,14 +1957,14 @@ source = ["Cython (==0.29.37)"]
 
 [[package]]
 name = "matplot2tikz"
-version = "0.3.3"
+version = "0.4.1"
 description = "Convert matplotlib figures into TikZ/PGFPlots"
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.9"
 groups = ["main"]
 files = [
-    {file = "matplot2tikz-0.3.3-py3-none-any.whl", hash = "sha256:ff076792b13d924bcfb1350c36626d2afc6ff28466d8b4c76ff6d91c87b9f587"},
-    {file = "matplot2tikz-0.3.3.tar.gz", hash = "sha256:ebdfce47b4afb0041071baad9be4f041ab528dbd27772d0d0c29b274572e1238"},
+    {file = "matplot2tikz-0.4.1-py3-none-any.whl", hash = "sha256:49ffd84cd36a27ba8b1918d4a7be0c1a0ff3136c5e6457ec0093ca1a1bea9da3"},
+    {file = "matplot2tikz-0.4.1.tar.gz", hash = "sha256:159e35f34f43f5038a6012819606567c65ac3b18ad1e85c5af2231a76afb6014"},
 ]
 
 [package.dependencies]
@@ -1839,9 +1975,9 @@ typing_extensions = ">=4.5"
 webcolors = "*"
 
 [package.extras]
-dev = ["coverage[toml] (==7.3.1)", "mypy", "pytest (==7.4.1)", "pytest-cov (==4.1.0)", "ruff", "tox", "tox-pyenv-redux", "typeguard (==4.4.0)"]
+dev = ["coverage[toml] (>=7.0.0)", "mypy", "pytest (>=7.4.1)", "pytest-cov (>=6.0.0)", "ruff", "tox", "tox-pyenv-redux", "typeguard (>=4.4.0)"]
 lint = ["mypy", "ruff"]
-test = ["coverage[toml] (==7.3.1)", "pytest (==7.4.1)", "pytest-cov (==4.1.0)", "typeguard (==4.4.0)"]
+test = ["coverage[toml] (>=7.0.0)", "pytest (>=7.4.1)", "pytest-cov (>=6.0.0)", "typeguard (>=4.4.0)"]
 
 [[package]]
 name = "matplotlib"
@@ -3245,6 +3381,25 @@ files = [
 ]
 
 [[package]]
+name = "scenariogeneration"
+version = "0.15.2"
+description = "Generation of OpenSCENARIO and OpenDRIVE xml files"
+optional = false
+python-versions = ">=3.9"
+groups = ["main"]
+files = [
+    {file = "scenariogeneration-0.15.2-py3-none-any.whl", hash = "sha256:1125e4207eb18ac1f881693ce4fa61eabaf62132a2da7d4e4f54141303b366f6"},
+    {file = "scenariogeneration-0.15.2.tar.gz", hash = "sha256:bcdb3adff58c1112ad52b78a0c7df722057d28dccdc41b72bbbc3929ed3f298a"},
+]
+
+[package.dependencies]
+lxml = "*"
+numpy = "*"
+pyclothoids = "*"
+scipy = "*"
+xmlschema = ">=3.3.1,<=3.4.5"
+
+[[package]]
 name = "scikit-learn"
 version = "1.7.1"
 description = "A set of python modules for machine learning and data mining"
@@ -3952,7 +4107,27 @@ six = ">=1.11.0"
 doc = ["sphinx"]
 test = ["pytest (>=4.6.7)", "pytest-checkdocs (>=1.2.5) ; python_version < \"3\"", "pytest-checkdocs (>=2.9.0) ; python_version >= \"3\"", "pytest-cov (>=2.6.1)"]
 
+[[package]]
+name = "xmlschema"
+version = "3.4.5"
+description = "An XML Schema validator and decoder"
+optional = false
+python-versions = ">=3.8"
+groups = ["main"]
+files = [
+    {file = "xmlschema-3.4.5-py3-none-any.whl", hash = "sha256:c91a2fca387dc4e8a2f2cb4a411ed23bef9da539968e5d858a3fe7f76a65464e"},
+    {file = "xmlschema-3.4.5.tar.gz", hash = "sha256:243244743f151ec859ec0bbf1368fa3f70e5f29e977b77f72e1c9b8f8ae670f6"},
+]
+
+[package.dependencies]
+elementpath = ">=4.4.0,<5.0.0"
+
+[package.extras]
+codegen = ["jinja2"]
+dev = ["coverage", "flake8", "lxml", "lxml-stubs", "memory_profiler", "mypy", "tox", "xmlschema[docs]"]
+docs = ["jinja2", "sphinx", "sphinx_rtd_theme"]
+
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.10, <3.12"
-content-hash = "8c74f25e55f57ad6e5a25e265b82bbc1dde2126e46eb5836d75a73a6eab15c38"
+content-hash = "59b61fe1d01ee590b3405934db45f5adce2940a985a22d718644801fc657f7c9"

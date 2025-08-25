@@ -1,0 +1,48 @@
+[project]
+name = "commonroad-all-unstable"
+version = "0.1.1"
+description = "Meta-Package for installing all CommonRoad Tools using the unstable development versions"
+authors = [
+    { name = "Cyber-Physical Systems Group, Technical University of Munich", email = "commonroad@lists.lrz.de" },
+]
+license = "GPL-3.0-or-later"
+readme = "README.md"
+keywords = ["autonomous", "automated", "vehicles", "driving", "motion", "planning", "simulation", "map", "scenario"]
+classifiers = [
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Operating System :: POSIX :: Linux",
+]
+requires-python = ">=3.10, <3.12"
+
+dependencies = [
+    "commonroad-io @ git+ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-io.git",
+    "commonroad-route-planner @ git+ssh://git@gitlab.lrz.de/cps/commonroad-route-planner.git",
+    "commonroad-scenario-factory @ git+ssh://git@gitlab.lrz.de/cps/commonroad/scenario-factory.git",
+    "commonroad-ots @ git+ssh://git@gitlab.lrz.de/cps/commonroad/cr-ots-interface.git",
+    "commonroad-sumo @ git+ssh://git@gitlab.lrz.de/cps/commonroad/sumo-interface.git",
+    "commonroad-labeling @ git+ssh://git@gitlab.lrz.de/cps/commonroad/automatic-scenario-labeling.git",
+    "commonroad-crime @ git+ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-criticality-measures.git",
+    "commonroad-drivability-checker @ git+ssh://git@gitlab.lrz.de/cps/commonroad-drivability-checker.git",
+    "commonroad-clcs @ git+ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-clcs.git",
+    "commonroad-global-planner @ git+ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-global-planner.git",
+    "commonroad-velocity-planner @ git+ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-velocity-planner.git",
+    "commonroad-reactive-planner @ git+ssh://git@gitlab.lrz.de/cps/reactive-planner.git",
+    "commonroad-raceline-planner @ git+ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-raceline-planner.git",
+    "commonroad-prediction @ git+ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-prediction.git",
+    "commonroad-openscenario-converter @ git+ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-openscenario-converter.git",
+    "commonroad-reach @ git+ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-reachable-set.git",
+    "commonroad-scenario-designer @ git+ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-scenario-designer.git",
+    # TODO fix all below packages
+#    "commonroad-vehicle-models @ git+ssh://git@gitlab.lrz.de/cps/commonroad-vehicle-models.git",  # TODO relax commonroad-crime to run development version
+#    "commonroad-path-toolkit @ git+ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-path-toolkit.git",  # TODO fix CI build backend
+#    "commonroad-carla-interface @ git+ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-carla-interface.git",  # TODO python version must be updated
+#    "commonroad-dataset-converter @ git+ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-dataset-converter.git",  # TODO commonroad-drivability-checker version must be updated
+#    "commonroad-rl @ git+ssh://???",  # TODO commonroad-route-planner version must be updated + add git url
+#    "commonroad-geometric @ git+ssh://???",  # TODO python version must be updated + add git url
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

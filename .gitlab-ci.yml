@@ -13,7 +13,7 @@ default:
   before_script:
     - apt-get update && apt-get install -y git
     - *update-git-config
-    - pip install poetry
+    - pip install "poetry<2.2"  # Limit to <2.2, since git LFS seems to be broken in >=2.2
 
 .python-versions: &python-versions
   - "3.10"

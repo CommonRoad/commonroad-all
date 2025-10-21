@@ -34,7 +34,7 @@ dependencies = [
     "commonroad-openscenario-converter @ git+ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-openscenario-converter",
     "commonroad-reach @ git+ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-reachable-set",
     "commonroad-global-planner @ git+ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-global-planner",
-    "commonroad-idm-planner @ git+ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-idm-planner",
+#    "commonroad-idm-planner @ git+ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-idm-planner",  # TODO upgrade matplotlib and numpy in other packages
     "commonroad-scenario-designer @ git+ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-scenario-designer",
     # packages only available in unstable
     "commonroad_cpp @ git+ssh://git@gitlab.lrz.de/cps/commonroad/environment-model@develop",

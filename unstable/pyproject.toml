@@ -38,7 +38,7 @@ dependencies = [
     "commonroad-scenario-designer @ git+ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-scenario-designer",
     # packages only available in unstable
     "commonroad_cpp @ git+ssh://git@gitlab.lrz.de/cps/commonroad/environment-model@develop",
-#    "commonroad_monitor @ git+ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-monitor",  # TODO relax lxml dependency
+    "commonroad_monitor @ git+ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-monitor",
     "cr_reach_flow @ git+ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-reach-flow@development",
     # TODO fix all below packages
 #    "commonroad-vehicle-models @ git+ssh://git@gitlab.lrz.de/cps/commonroad-vehicle-models.git",  # TODO relax commonroad-crime to run development version

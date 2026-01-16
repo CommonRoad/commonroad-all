@@ -56,6 +56,7 @@ install_unstable:
   parallel:
     matrix:
       - PYTHON_VERSION: *python-versions
+  allow_failure: true
   script:
     # TODO fix build backend (for path toolkit), i.e., install required system dependencies
     - apt-get update && apt-get install -y openjdk-25-jre-headless

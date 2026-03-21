@@ -34,6 +34,7 @@ dependencies = [
     "commonroad-openscenario-converter @ git+ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-openscenario-converter",
     "commonroad-reach @ git+ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-reachable-set",
     "commonroad-global-planner @ git+ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-global-planner",
+    "commonroad-dataset-converter @ git+ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-dataset-converter.git",
 #    "commonroad-idm-planner @ git+ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-idm-planner",  # TODO upgrade matplotlib and numpy in other packages
     "commonroad-scenario-designer @ git+ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-scenario-designer",
     # packages only available in unstable
@@ -44,7 +45,6 @@ dependencies = [
 #    "commonroad-vehicle-models @ git+ssh://git@gitlab.lrz.de/cps/commonroad-vehicle-models.git",  # TODO relax commonroad-crime to run development version
 #    "commonroad-path-toolkit @ git+ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-path-toolkit.git",  # TODO fix CI build backend
 #    "commonroad-carla-interface @ git+ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-carla-interface.git",  # TODO python version must be updated
-#    "commonroad-dataset-converter @ git+ssh://git@gitlab.lrz.de/cps/commonroad/commonroad-dataset-converter.git",  # TODO commonroad-drivability-checker version must be updated
 #    "commonroad-rl @ git+ssh://???",  # TODO commonroad-route-planner version must be updated + add git url
 #    "commonroad-geometric @ git+ssh://???",  # TODO python version must be updated + add git url
 ]
